@@ -8,4 +8,5 @@ export const HeaderStyled = styled.div`
 
 export const Logo = styled.img`
   margin-left: 3.1rem;
+  width: 3.7rem;
 `;
