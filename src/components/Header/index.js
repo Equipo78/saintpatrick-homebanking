@@ -1,4 +1,6 @@
+//  styles
 import { HeaderStyled, Logo } from "./styles";
+//  images
 import logo from "assets/logo.png";
 
 const Header = () => {

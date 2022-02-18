@@ -1,19 +1,9 @@
-import {
-  Wrapper,
-  Input,
-  Form,
-  Label,
-  Adornament,
-  Button,
-  Lock,
-  CreditCard,
-  Title,
-  ButtonSubmit,
-  TextButton,
-  Arrow,
-  LoginTitle,
-} from "./styles";
+//  hooks
 import { useState } from "react";
+//  components
+import ButtonArrow from "components/Buttons/ButtonArrow";
+//  styles
+import { Wrapper, Input, Form, Label, Adornament, Eye, Lock, CreditCard, Title, LoginTitle } from "./styles";
 import { VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
 
 const LoginContainer = () => {
@@ -46,8 +36,7 @@ const LoginContainer = () => {
 
         <Form variant="outlined">
           <CreditCard />
-          <Label htmlFor="outlined-adornment-password">      Ingresá el número de tarjeta
-          </Label>
+          <Label htmlFor="outlined-adornment-password">      Ingresá el número de tarjeta</Label>
           <Input
             id="outlined-adornment-password"
             type="text"
@@ -65,7 +54,7 @@ const LoginContainer = () => {
             onChange={handleChange("password")}
             endAdornment={
               <Adornament position="end">
-                <Button
+                <Eye
                   aria-label="toggle password visibility"
                   onClick={handleClickShowPassword}
                   onMouseDown={handleMouseDownPassword}
@@ -76,17 +65,14 @@ const LoginContainer = () => {
                   ) : (
                     <VisibilityOutlined />
                   )}
-                </Button>
+                </Eye>
               </Adornament>
             }
             label="Ingresá el PINasdas"
           />
         </Form>
 
-        <ButtonSubmit>
-          <TextButton>INICIAR SESIÓN</TextButton>
-          <Arrow />
-        </ButtonSubmit>
+        <ButtonArrow text="INICIAR SESION" />
       </Wrapper>
     </>
   );

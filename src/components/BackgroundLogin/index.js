@@ -1,9 +1,16 @@
-import { Background, BackgroundImgCenter, BackgroundImgLeft } from "./styles";
+//  styles
+import { WrapperBackground } from "GlobalStyle";
+import { BackgroundImgCenter, BackgroundImgLeft } from "./styles";
+//  images
+import background from "assets/background-login/background.png";
+
 const BackgroundLogin = () => {
-  return <Background>
-    <BackgroundImgLeft />
-    <BackgroundImgCenter />
-  </Background>
+  return (
+    <WrapperBackground position="right" background={background}>
+      <BackgroundImgLeft />
+      <BackgroundImgCenter />
+    </WrapperBackground>
+  );
 };
 
 export default BackgroundLogin;
