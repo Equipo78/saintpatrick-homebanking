@@ -3,9 +3,9 @@ import { HeaderStyled, Logo } from "./styles";
 //  images
 import logo from "assets/logo.png";
 
-const Header = () => {
+const Header = ({ height }) => {
   return (
-    <HeaderStyled>
+    <HeaderStyled height={height}>
       <Logo src={logo} alt="logo" />
     </HeaderStyled>
   );
