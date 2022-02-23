@@ -11,6 +11,7 @@ export const NavBarContainer = styled.nav`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const NavBarUl = styled.ul`

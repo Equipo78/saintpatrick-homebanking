@@ -1,11 +1,9 @@
-import Login from 'pages/Login';
-import Logout from 'pages/Logout';
+import AppRouter from 'routes/AppRouter';
 
 function App() {
   return (
     <div>
-      {/* <Login /> */}
-      <Logout />
+      <AppRouter />
     </div>
   );
 }
