@@ -1,10 +1,20 @@
 //  hooks
 import { useState } from "react";
-//  components
-import ButtonArrow from "components/Buttons/ButtonArrow";
 //  styles
-import { Wrapper, Input, Form, Label, Adornament, Eye, Lock, CreditCard, Title, LoginTitle } from "./styles";
+import {
+  Wrapper,
+  Input,
+  Form,
+  Label,
+  Adornament,
+  Eye,
+  Lock,
+  CreditCard,
+  Title,
+  LoginTitle,
+} from "./styles";
 import { VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
+import { MainButton, TextButton, Arrow } from "../Buttons/styles";
 
 const LoginContainer = () => {
   const [values, setValues] = useState({
@@ -36,7 +46,8 @@ const LoginContainer = () => {
 
         <Form variant="outlined">
           <CreditCard />
-          <Label htmlFor="outlined-adornment-password">      Ingresá el número de tarjeta</Label>
+          <Label htmlFor="outlined-adornment-password">       Ingresá el número de tarjeta
+          </Label>
           <Input
             id="outlined-adornment-password"
             type="text"
@@ -46,7 +57,7 @@ const LoginContainer = () => {
 
         <Form variant="outlined">
           <Lock />
-          <Label htmlFor="outlined-adornment-password">      Ingresá el PIN</Label>
+          <Label htmlFor="outlined-adornment-password">       Ingresá el PIN</Label>
           <Input
             id="outlined-adornment-password"
             type={values.showPassword ? "text" : "password"}
@@ -72,7 +83,10 @@ const LoginContainer = () => {
           />
         </Form>
 
-        <ButtonArrow text="INICIAR SESION" />
+        <MainButton width="100%">
+          <TextButton>INICIAR SESION</TextButton>
+          <Arrow />
+        </MainButton>
       </Wrapper>
     </>
   );
