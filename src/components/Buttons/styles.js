@@ -1,10 +1,10 @@
 import { ArrowForwardOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const MainButton = styled.button`
   cursor: pointer;
   display: flex;
-  width: 100%;
+  width: ${props => props.width };
   outline: none;
   border: none;
   padding: 1rem;

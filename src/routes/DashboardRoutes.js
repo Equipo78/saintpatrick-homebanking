@@ -3,13 +3,17 @@ import { MainLayoutGrid } from "GlobalStyle";
 import Header from "components/Header/Header";
 import NavBar from "components/NavBar/NavBar";
 import Home from "pages/Home/Home";
+import StepperContainer from "components/Transactions/StepperContainer";
 
 const DashboardRoutes = () => {
   return (
     <MainLayoutGrid>
       <Header height="100%" />
       <NavBar />
-      <Routes>{/* <Route path="/" element={<Home />} /> */}</Routes>
+      <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/transactions" element={<StepperContainer />} />
+      </Routes>
     </MainLayoutGrid>
   );
 };
