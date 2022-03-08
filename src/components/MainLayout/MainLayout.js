@@ -4,12 +4,12 @@ import Main from "../Main/Main";
 import NavBar from "../NavBar/NavBar";
 import { MainLayoutGrid } from "./styles";
 
-const MainLayout = () => {
+const MainLayout = ({ page }) => {
   return (
     <MainLayoutGrid>
       <Header />
       <NavBar />
-      <Main />
+      <Main page={page} />
     </MainLayoutGrid>
   );
 };

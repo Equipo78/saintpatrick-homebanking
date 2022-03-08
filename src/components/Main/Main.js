@@ -1,8 +1,8 @@
 import React from "react";
 import { MainContainer } from "./styles";
 
-const Main = () => {
-  return <MainContainer></MainContainer>;
+const Main = ({ page }) => {
+  return <MainContainer>{page}</MainContainer>;
 };
 
 export default Main;
