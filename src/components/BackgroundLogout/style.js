@@ -16,6 +16,10 @@ export const BoxLogout = styled.div`
   @media (max-width: 1565px){
      width: 90%;
   }
+  @media (max-width: 960px){
+     justify-content: center;
+     width: 100%;
+  }
 `;
 
 export const ImgLogout = styled.div`
@@ -28,5 +32,8 @@ export const ImgLogout = styled.div`
   margin: 1rem;
   @media (max-width: 1565px){
      background-position: center;
+  }
+  @media (max-width: 960px){
+     display:none;
   }
 `;

@@ -12,6 +12,7 @@ export const NavBarContainer = styled.nav`
   font-size: 1rem;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
+  min-width: 225px;
 `;
 
 export const NavBarUl = styled.ul`

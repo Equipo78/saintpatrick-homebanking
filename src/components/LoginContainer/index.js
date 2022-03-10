@@ -8,8 +8,8 @@ import {
   Label,
   Adornament,
   Eye,
-  Lock,
-  CreditCard,
+  LockImg,
+  UserImg,
   Title,
   LoginTitle,
 } from "./styles";
@@ -45,19 +45,19 @@ const LoginContainer = () => {
         <LoginTitle>Ingresá tus datos para comenzar</LoginTitle>
 
         <Form variant="outlined">
-          <CreditCard />
-          <Label htmlFor="outlined-adornment-password">       Ingresá el número de tarjeta
+          <UserImg />
+          <Label htmlFor="outlined-adornment-password">       Usuario
           </Label>
           <Input
             id="outlined-adornment-password"
             type="text"
-            label="Ingresá el número de tarjetaasdas"
+            label="Usuarioooooooo"
           />
         </Form>
 
         <Form variant="outlined">
-          <Lock />
-          <Label htmlFor="outlined-adornment-password">       Ingresá el PIN</Label>
+          <LockImg />
+          <Label htmlFor="outlined-adornment-password">       Clave</Label>
           <Input
             id="outlined-adornment-password"
             type={values.showPassword ? "text" : "password"}
@@ -79,7 +79,7 @@ const LoginContainer = () => {
                 </Eye>
               </Adornament>
             }
-            label="Ingresá el PINasdas"
+            label="Claveeeeeeee"
           />
         </Form>
 

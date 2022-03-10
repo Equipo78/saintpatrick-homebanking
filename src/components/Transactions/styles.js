@@ -7,6 +7,7 @@ export const WrapperTransactions = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 4rem;
+  margin-right: 1rem;
 `;
 
 export const ContainerTransactions = styled.div`

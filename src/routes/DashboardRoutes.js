@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import { MainLayoutGrid } from "GlobalStyle";
 import Header from "components/Header/Header";
 import NavBar from "components/NavBar/NavBar";
-import Home from "pages/Home/Home";
 import StepperContainer from "components/Transactions/StepperContainer";
 
 const DashboardRoutes = () => {

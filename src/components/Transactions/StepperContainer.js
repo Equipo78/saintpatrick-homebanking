@@ -25,7 +25,7 @@ const StepperContainer = () => {
 
   return (
     <WrapperTransactions>
-      <StepperWrapper activeStep={step - 1} orientation="vertical">
+      <StepperWrapper activeStep={step - 1} orientation='vertical'>
         <Step>
           <StepLabel></StepLabel>
         </Step>

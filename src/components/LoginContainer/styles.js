@@ -1,9 +1,4 @@
 import {
-  LockOutlined,
-  CreditCardOutlined,
-  ArrowForwardOutlined,
-} from "@mui/icons-material";
-import {
   FormControl,
   IconButton,
   InputAdornment,
@@ -11,15 +6,30 @@ import {
   OutlinedInput,
 } from "@mui/material";
 import styled from "styled-components";
+import userpng from 'assets/background-login/user.png'
+import lockpng from 'assets/background-login/lock.png'
 
 export const Title = styled.h1`
   position: absolute;
   top: 8rem;
-  left: 5rem;
+  left: 10rem;
   width: 50rem;
   font-family: "Bona Nova", serif;
   font-weight: 400;
   font-size: 3.7rem;
+  @media (max-width: 1570px) {
+    width: 35rem;
+  }
+  @media (max-width: 1315px) {
+    left: 3rem;
+    width: 75%;
+  }
+  @media (max-width: 720px) {
+font-size: 3rem;
+  }
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -33,7 +43,19 @@ export const Wrapper = styled.div`
   border-radius: 3.1rem;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   padding: 63px 45px;
-  margin: auto 3.3rem auto 0;
+  margin: auto 10rem auto 0;
+  @media (max-width: 1315px) {
+    margin: auto 3rem auto 0;
+  }
+  @media (max-width: 965px) {
+    margin: auto;
+    top: 8rem;
+    left: 0;
+  }
+  @media (max-width: 500px) {
+    margin: auto 1rem;
+    top: 2rem;
+  }
 `;
 
 export const LoginTitle = styled.h2`
@@ -41,6 +63,9 @@ export const LoginTitle = styled.h2`
   font-weight: 400;
   font-size: 22px;
   margin-bottom: 2rem;
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 `;
 
 export const Form = styled(FormControl)`
@@ -48,20 +73,24 @@ export const Form = styled(FormControl)`
   margin-bottom: 1rem !important;
 `;
 
-export const Lock = styled(LockOutlined)`
+export const LockImg = styled.div`
   z-index: 10;
   position: absolute;
-  top: 0.9rem;
-  left: 0.5rem;
-  color: #767676 !important;
+  top: 1rem;
+  left: .9rem;
+  width: 20px;
+  height: 20px;
+  background: url(${lockpng}) no-repeat;
 `;
 
-export const CreditCard = styled(CreditCardOutlined)`
+export const UserImg = styled.div`
   z-index: 10;
   position: absolute;
-  top: 0.9rem;
-  left: 0.5rem;
-  color: #767676 !important;
+  top: 1rem;
+  left: .8rem;
+  width: 20px;
+  height: 20px;
+  background: url(${userpng});
 `;
 
 export const Label = styled(InputLabel)`
@@ -81,4 +110,3 @@ export const Input = styled(OutlinedInput)`
   padding-left: 2rem !important;
   background-color: #ffffff;
 `;
-
