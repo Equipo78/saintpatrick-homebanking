@@ -8,22 +8,30 @@ export const WrapperTransactions = styled.div`
   justify-content: center;
   margin-top: 4rem;
   margin-right: 1rem;
+  @media (max-width: 550px) {
+    flex-direction: column;
+    margin: 4rem 1.5rem 0 1.5rem;
+  }
 `;
 
 export const ContainerTransactions = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 30vh;
   width: 100%;
+  height: auto;
+  @media (max-width: 550px) {
+  }
 `;
 
 export const BoxTransaction = styled.div`
-  position: relative;
-  max-width: 623px;
+  max-width: 40rem;
   height: auto;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 1px 12px rgba(0, 0, 0, 0.04);
   border-radius: 20px;
+  @media (max-width: 550px) {
+    box-shadow: none;
+  }
 `;
 
 export const TitleTransaction = styled.h2`
@@ -32,12 +40,37 @@ export const TitleTransaction = styled.h2`
   font-size: 1.2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.4rem 2rem;
+  @media (max-width: 550px) {
+    border-bottom: none;
+    padding: 1.4rem 0;
+  }
 `;
 
 export const ContainerButton = styled.div`
-  position: absolute;
-  bottom: -4rem;
-  right: 0;
+  display: flex;
+  align-items: center;
+  padding-left: ${(props) => props.padleft};
+  @media (max-width: 830px) {
+    padding-left: 0 !important;
+    justify-content: end;
+  }
+  @media (max-width: 550px) {
+    height: 100%;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+  }
+`;
+
+export const TextBack = styled.h3`
+  cursor: pointer;
+  color: var(--primary);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 1rem 2rem 0 0;
+  @media (max-width: 550px) {
+    padding-top: 0 !important;
+    padding-bottom: 0.7rem;
+  }
 `;
 
 export const StepperWrapper = styled(Stepper)`
@@ -45,8 +78,8 @@ export const StepperWrapper = styled(Stepper)`
   align-items: center;
   height: 20rem;
   .MuiSvgIcon-root {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
   .MuiSvgIcon-root.Mui-active,
   .MuiSvgIcon-root.Mui-completed {
@@ -54,8 +87,14 @@ export const StepperWrapper = styled(Stepper)`
   }
   .MuiStepConnector-line {
     height: 100%;
+    border-top-width: 5px;
     border-left-width: 5px;
     margin-right: 20px;
+  }
+  @media (max-width: 550px) {
+    .MuiStepConnector-line {
+      margin-right: 0 !important;
+    }
   }
 `;
 
@@ -66,6 +105,10 @@ export const InputCBU = styled(TextField)`
   background-color: #ffffff;
   margin: 1rem 0 3.5rem 2rem !important;
   width: 55%;
+  @media (max-width: 550px) {
+    width: 100%;
+    margin: 0 !important;
+  }
 `;
 
 //  second step
@@ -73,12 +116,19 @@ export const InputAmount = styled(OutlinedInput)`
   border-radius: 8px;
   background-color: #ffffff;
   width: 55%;
+  @media (max-width: 550px) {
+    width: 100%;
+    margin: 0 !important;
+  }
 `;
 
 export const InputContainer = styled.div`
   display: flex;
   align-items: center;
   margin: 1rem 0 3.5rem 2rem !important;
+  @media (max-width: 550px) {
+    margin: 0 !important;
+  }
 `;
 
 export const IconInput = styled.div`

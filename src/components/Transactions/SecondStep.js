@@ -10,6 +10,7 @@ import {
   InputAmount,
   InputContainer,
   IconInput,
+  TextBack,
 } from "./styles";
 import { MainButton, TextButton } from "../Buttons/styles";
 import { InputAdornment } from "@mui/material";
@@ -30,13 +31,13 @@ const SecondStep = () => {
             endAdornment={<InputAdornment position="end">ARS</InputAdornment>}
           />
         </InputContainer>
-
-        <ContainerButton>
-          <MainButton width="8rem" onClick={() => setStep(3)}>
-            <TextButton>CONTINUAR</TextButton>
-          </MainButton>
-        </ContainerButton>
       </BoxTransaction>
+      <ContainerButton padleft="27rem">
+        <TextBack onClick={() => setStep(1)}>Volver</TextBack>
+        <MainButton width="8rem" onClick={() => setStep(3)}>
+          <TextButton>CONTINUAR</TextButton>
+        </MainButton>
+      </ContainerButton>
     </ContainerTransactions>
   );
 };

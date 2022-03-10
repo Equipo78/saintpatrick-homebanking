@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavBarContainer = styled.nav`
   grid-area: navbar;
-  display: flex;
+  display: ${props => props.display};
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;

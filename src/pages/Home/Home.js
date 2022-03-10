@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const Home = () => {
-  return <></>
-=======
 import React from "react";
 import {
   CardContainer,
@@ -298,7 +294,6 @@ const Home = () => {
       </HomeMovimientos>
     </HomeGridLayout>
   );
->>>>>>> d52828557477d8946c9679242658ba89f7409713
 };
 
 export default Home;

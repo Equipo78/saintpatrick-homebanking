@@ -22,13 +22,13 @@ export const Wrapper = styled.div`
 export const WrapperBackground = styled.div`
   z-index: -1;
   position: relative;
-  background-image: url(${props => props.background});
+  background-image: url(${(props) => props.background});
   background-size: cover;
-  background-position: ${props => props.position};
+  background-position: ${(props) => props.position};
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  object-fit:cover;
+  object-fit: cover;
 `;
 
 export const MainLayoutGrid = styled.div`
@@ -37,6 +37,11 @@ export const MainLayoutGrid = styled.div`
   grid-template-columns: 0.6fr 2.4fr;
   grid-template-rows: 0.2fr 2.8fr;
   grid-template-areas:
-    "header header header"
-    "navbar main main";
+    "header header"
+    "navbar main";
+  @media (max-width: 990px) {
+    grid-template-areas:
+      "header header"
+      "main main";
+  }
 `;

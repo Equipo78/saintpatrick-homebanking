@@ -4,10 +4,15 @@ import {
   ContainerTransactions,
   TitleTransaction,
   ContainerButton,
+  TextBack,
 } from "./styles";
 import { MainButton, TextButton } from "../Buttons/styles";
+import { useContext } from "react";
+import TransactionsContext from "context/TransactionsContext";
 
 const ThirdStep = () => {
+  const { setStep } = useContext(TransactionsContext);
+
   return (
     <ContainerTransactions>
       <BoxTransaction>
@@ -28,13 +33,13 @@ const ThirdStep = () => {
             <DataText>Cuenta Banco Río</DataText>
           </DataUser>
         </ContainerDataTransaction> */}
-
-        <ContainerButton>
-          <MainButton width="15rem">
-            <TextButton>CONFIRMAR TRANSFERENCIA</TextButton>
-          </MainButton>
-        </ContainerButton>
       </BoxTransaction>
+      <ContainerButton padleft='20rem'>
+        <TextBack onClick={() => setStep(2)}>Volver</TextBack>
+        <MainButton width="15rem">
+          <TextButton>CONFIRMAR TRANSFERENCIA</TextButton>
+        </MainButton>
+      </ContainerButton>
     </ContainerTransactions>
   );
 };

@@ -10,7 +10,7 @@ export const HeaderStyled = styled.div`
 
 export const Logo = styled.img`
   position: absolute;
-  bottom: -1.3rem;
+
   margin-left: 3.1rem;
   width: 4.4rem;
 `;

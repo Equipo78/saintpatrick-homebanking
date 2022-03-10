@@ -15,10 +15,12 @@ import Comprobantes from "../../assets/icons_svg/Icon/Comprobantes.svg";
 import Perfil from "../../assets/icons_svg/Icon/Perfil.svg";
 import Ayuda from "../../assets/icons_svg/Icon/Ayuda.svg";
 import Salir from "../../assets/icons_svg/Icon/Salir.svg";
+import useMediaQuery from "hooks/useMediaQuery";
 
 const NavBar = () => {
+  const isDesktop = useMediaQuery("(min-width: 990px)");
   return (
-    <NavBarContainer>
+    <NavBarContainer display={isDesktop ? 'flex' : 'none'}>
       <NavBarUl>
         <NavBarLi>
           <NavBarIcon src={Home} />

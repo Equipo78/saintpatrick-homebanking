@@ -19,14 +19,13 @@ function FirstStep() {
       <BoxTransaction>
         <TitleTransaction>Agregar una cuenta</TitleTransaction>
         <InputCBU id="outlined-basic" label="Ingresá el número de CBU" />
-
-        <ContainerButton>
-          <MainButton width="8rem" onClick={() => setStep(2)}>
-            <TextButton>CONTINUAR</TextButton>
-          </MainButton>
-        </ContainerButton>
-
       </BoxTransaction>
+
+      <ContainerButton padleft='32rem'>
+        <MainButton width="8rem" onClick={() => setStep(2)}>
+          <TextButton>CONTINUAR</TextButton>
+        </MainButton>
+      </ContainerButton>
     </ContainerTransactions>
   );
 }
