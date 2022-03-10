@@ -6,7 +6,7 @@ export const NavBarContainer = styled.nav`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   background-color: rgba(0, 87, 88, 0.03);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
@@ -29,6 +29,7 @@ export const NavBarLi = styled.li`
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
+  cursor: pointer;
 `;
 
 const NavBarImg = styled.img`
