@@ -15,4 +15,4 @@ const BackgroundLogin = () => {
   );
 };
 
-export default BackgroundLogin;
+export default BackgroundLogin

@@ -1,19 +1,9 @@
 //  hooks
 import { useState } from "react";
 //  styles
-import {
-  Wrapper,
-  Input,
-  Form,
-  Label,
-  Adornament,
-  Eye,
-  LockImg,
-  UserImg,
-  LoginTitle,
-} from "./styles";
-import { VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
+import {VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
 import { MainButton, TextButton, Arrow } from "../Buttons/styles";
+import { Label,Adornament, Eye, Form, Input, LockImg, LoginTitle, UserImg, Wrapper } from "./styles";
 
 const LoginContainer = () => {
   const [values, setValues] = useState({
@@ -37,8 +27,9 @@ const LoginContainer = () => {
   };
 
   return (
-    <Wrapper>
-      <LoginTitle>Ingresá tus datos para comenzar</LoginTitle>
+      <Wrapper>
+        <LoginTitle>Ingresá tus datos para comenzar</LoginTitle>
+
 
       <Form variant="outlined">
         <UserImg />
