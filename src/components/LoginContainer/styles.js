@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
     align-self: center;
     grid-column: 1/-1;
     grid-row: 1/-1;
-    padding-top: 0;
+    padding: 0;
   }
 `;
 

@@ -36,7 +36,7 @@ export const BackgroundImgCenter = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   width: 340px;
-  height: 400px;
+  height: 370px;
   @media (max-width: 1200px) {
     display: none;
   }
@@ -49,7 +49,7 @@ export const Title = styled.h1`
   width: 90%;
   font-family: "Bona Nova", serif;
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   @media (max-width: 600px) {
     font-size: 2.5rem;
   }

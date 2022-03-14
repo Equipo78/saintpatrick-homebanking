@@ -6,8 +6,7 @@ export const WrapperTransactions = styled.div`
   grid-area: main;
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
-  margin-right: 1rem;
+  margin: 4rem 1rem 0 1rem;
   @media (max-width: 550px) {
     flex-direction: column;
     margin: 4rem 1.5rem 0 1.5rem;
@@ -20,8 +19,6 @@ export const ContainerTransactions = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
-  @media (max-width: 550px) {
-  }
 `;
 
 export const BoxTransaction = styled.div`
