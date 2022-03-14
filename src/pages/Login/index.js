@@ -39,12 +39,7 @@ const Login = () => {
           <Loader />
         ) : (
           <>
-            {!isMobile && (
-              <>
-                <BackgroundLogin />
-                <LoginContainer />
-              </>
-            )}
+            {!isMobile && <BackgroundLogin />}
             {isMobile & firstPage ? <BackgroundLogin /> : <LoginContainer />}
           </>
         )}

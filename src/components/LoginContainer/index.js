@@ -1,9 +1,19 @@
 //  hooks
 import { useState } from "react";
 //  styles
-import {VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
+import { VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
 import { MainButton, TextButton, Arrow } from "../Buttons/styles";
-import { Label,Adornament, Eye, Form, Input, LockImg, LoginTitle, UserImg, Wrapper } from "./styles";
+import {
+  Label,
+  Adornament,
+  Eye,
+  Form,
+  Input,
+  LockImg,
+  LoginTitle,
+  UserImg,
+  Wrapper,
+} from "./styles";
 
 const LoginContainer = () => {
   const [values, setValues] = useState({
@@ -27,47 +37,47 @@ const LoginContainer = () => {
   };
 
   return (
-      <Wrapper>
-        <LoginTitle>Ingresá tus datos para comenzar</LoginTitle>
-
-
-      <Form variant="outlined">
-        <UserImg />
-        <Label htmlFor="outlined-adornment-password">     Usuario</Label>
-        <Input
-          id="outlined-adornment-password"
-          type="text"
-          label="Usuarioooooooo"
-        />
-      </Form>
+    <Wrapper>
+      <LoginTitle>Ingresá tus datos para comenzar</LoginTitle>
 
       <Form variant="outlined">
-        <LockImg />
-        <Label htmlFor="outlined-adornment-password">     Clave</Label>
-        <Input
-          id="outlined-adornment-password"
-          type={values.showPassword ? "text" : "password"}
-          value={values.password}
-          onChange={handleChange("password")}
-          endAdornment={
-            <Adornament position="end">
-              <Eye
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
-                edge="end"
-              >
-                {values.showPassword ? (
-                  <VisibilityOffOutlined />
-                ) : (
-                  <VisibilityOutlined />
-                )}
-              </Eye>
-            </Adornament>
-          }
-          label="Claveeeeeeee"
-        />
-      </Form>
+          <UserImg />
+          <Label htmlFor="outlined-adornment-password">       Usuario
+          </Label>
+          <Input
+            id="outlined-adornment-password"
+            type="text"
+            label="Usuarioooooooo"
+          />
+        </Form>
+
+        <Form variant="outlined">
+          <LockImg />
+          <Label htmlFor="outlined-adornment-password">       Clave</Label>
+          <Input
+            id="outlined-adornment-password"
+            type={values.showPassword ? "text" : "password"}
+            value={values.password}
+            onChange={handleChange("password")}
+            endAdornment={
+              <Adornament position="end">
+                <Eye
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {values.showPassword ? (
+                    <VisibilityOffOutlined />
+                  ) : (
+                    <VisibilityOutlined />
+                  )}
+                </Eye>
+              </Adornament>
+            }
+            label="Claveeeeeeee"
+          />
+        </Form>
 
       <MainButton width="100%">
         <TextButton>INICIAR SESION</TextButton>

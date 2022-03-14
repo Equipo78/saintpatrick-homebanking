@@ -1,3 +1,4 @@
+
 import {
   FormControl,
   IconButton,
@@ -59,6 +60,7 @@ export const LockImg = styled.div`
   width: 20px;
   height: 20px;
   background: url(${lockpng}) no-repeat;
+  background-size: contain;
 `;
 
 export const UserImg = styled.div`
