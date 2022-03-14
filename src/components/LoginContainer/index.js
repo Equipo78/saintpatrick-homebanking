@@ -4,6 +4,7 @@ import {
   Form,
   Label,
   Adornament,
+<<<<<<< Updated upstream
   Button,
   Lock,
   CreditCard,
@@ -11,6 +12,11 @@ import {
   ButtonSubmit,
   TextButton,
   Arrow,
+=======
+  Eye,
+  LockImg,
+  UserImg,
+>>>>>>> Stashed changes
   LoginTitle,
 } from "./styles";
 import { useState } from "react";
@@ -39,8 +45,6 @@ const LoginContainer = () => {
 
   return (
     <>
-      <Title>¡Hola! Te damos la bienvenida a nuestro Home Banking</Title>
-
       <Wrapper>
         <LoginTitle>Ingresá tus datos para comenzar</LoginTitle>
 

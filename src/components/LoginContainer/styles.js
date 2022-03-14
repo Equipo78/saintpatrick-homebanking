@@ -1,7 +1,6 @@
 import {
   LockOutlined,
   CreditCardOutlined,
-  ArrowForwardOutlined,
 } from "@mui/icons-material";
 import {
   FormControl,
@@ -11,29 +10,34 @@ import {
   OutlinedInput,
 } from "@mui/material";
 import styled from "styled-components";
-
-export const Title = styled.h1`
-  position: absolute;
-  top: 8rem;
-  left: 5rem;
-  width: 50rem;
-  font-family: "Bona Nova", serif;
-  font-weight: 400;
-  font-size: 3.7rem;
-`;
+import userpng from "assets/background-login/user.png";
+import lockpng from "assets/background-login/lock.png";
+import { fadeIn } from "GlobalStyle";
 
 export const Wrapper = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  grid-column: 3;
+  grid-row: 2 / span 2;
+  justify-self: center !important;
+  margin: 0 1rem;
   max-width: 27rem;
   max-height: 25rem;
   background: #e6efef;
   border-radius: 3.1rem;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   padding: 63px 45px;
-  margin: auto 3.3rem auto 0;
+  animation: ${fadeIn} 2s;
+  @media (max-width: 1200px) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  @media (max-width: 920px) {
+    background: none;
+    box-shadow: none;
+    align-self: center;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    padding-top: 0;
+  }
 `;
 
 export const LoginTitle = styled.h2`
@@ -51,17 +55,21 @@ export const Form = styled(FormControl)`
 export const Lock = styled(LockOutlined)`
   z-index: 10;
   position: absolute;
-  top: 0.9rem;
-  left: 0.5rem;
-  color: #767676 !important;
+  top: 1rem;
+  left: 0.9rem;
+  width: 20px;
+  height: 20px;
+  background: url(${lockpng}) no-repeat;
 `;
 
 export const CreditCard = styled(CreditCardOutlined)`
   z-index: 10;
   position: absolute;
-  top: 0.9rem;
-  left: 0.5rem;
-  color: #767676 !important;
+  top: 1rem;
+  left: 0.8rem;
+  width: 20px;
+  height: 20px;
+  background: url(${userpng});
 `;
 
 export const Label = styled(InputLabel)`
@@ -82,32 +90,3 @@ export const Input = styled(OutlinedInput)`
   background-color: #ffffff;
 `;
 
-export const ButtonSubmit = styled.button`
-  cursor: pointer;
-  display: flex;
-  width: 100%;
-  outline: none;
-  border: none;
-  padding: 1rem;
-  background-color: var(--primary);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  align-items: center;
-  color: #ffffff;
-  margin-top: 1rem;
-  :hover {
-    background-color: #008889;
-  }
-`;
-
-export const TextButton = styled.p`
-  display: flex;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  justify-content: center;
-  width: 100%;
-`;
-
-export const Arrow = styled(ArrowForwardOutlined)`
-  color: var(--secondary);
-`;
