@@ -16,9 +16,15 @@ export const BoxLogout = styled.div`
   @media (max-width: 1565px) {
     width: 90%;
   }
-  @media (max-width: 960px) {
-    justify-content: center;
-    width: 100%;
+  @media (max-width: 1079px) {
+    flex-direction: column;
+    height: 60vh;
+  }
+  @media (max-width: 550px) {
+    height: 300px;
+  }
+  @media (max-width: 350px) {
+    height: 50vh;
   }
 `
 
@@ -33,7 +39,7 @@ export const ImgLogout = styled.div`
   @media (max-width: 1565px) {
     background-position: center;
   }
-  @media (max-width: 960px) {
+  @media (max-width: 550px) {
     display: none;
   }
 `

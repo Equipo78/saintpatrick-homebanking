@@ -7,7 +7,7 @@ import StepperContainer from 'components/Transactions/StepperContainer'
 const DashboardRoutes = () => {
   return (
     <MainLayoutGrid>
-      <Header height="100%" />
+      <Header height="4.4rem" />
       <NavBar />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}

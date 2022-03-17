@@ -17,6 +17,9 @@ export const MainButton = styled.button`
   :hover {
     background-color: #008889;
   }
+  @media (max-width: 350px) {
+    width: 10rem;
+  }
 `
 
 export const TextButton = styled.p`

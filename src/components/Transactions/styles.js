@@ -67,6 +67,10 @@ export const TextBack = styled.h3`
     padding-top: 0 !important;
     padding-bottom: 0.7rem;
   }
+  @media (max-width: 350px) {
+    padding-top: 0 !important;
+    padding-bottom: 1.1rem;
+  }
 `
 
 export const StepperWrapper = styled(Stepper)`

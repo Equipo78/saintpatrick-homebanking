@@ -43,6 +43,9 @@ export const LoginTitle = styled.h2`
 export const Form = styled(FormControl)`
   width: 100%;
   margin-bottom: 1rem !important;
+  .MuiInputLabel-root {
+    padding-left: 1.7rem !important;
+  }
 `
 
 export const LockImg = styled.div`

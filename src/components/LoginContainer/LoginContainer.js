@@ -48,7 +48,7 @@ const LoginContainer = () => {
 
       <Form variant="outlined">
         <LockImg />
-        <Label htmlFor="outlined-adornment-password"> Clave</Label>
+        <Label htmlFor="outlined-adornment-password">Clave</Label>
         <Input
           endAdornment={
             <Adornament position="end">

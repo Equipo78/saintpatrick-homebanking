@@ -9,8 +9,9 @@ export const Wrapper = styled.div`
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   padding: 63px 45px;
   margin: 1rem;
-  @media (max-width: 960px) {
-    flex: 1;
+  @media (max-width: 500px) {
+    padding: 50px 20px;
+    margin: 0;
   }
 `
 

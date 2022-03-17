@@ -1,5 +1,5 @@
 import { WrapperBackground } from 'GlobalStyle'
-import LogoutContainer from 'components/LogoutContainer'
+import LogoutContainer from 'components/LogoutContainer/LogoutContainer'
 import background from 'assets/background-logout/background.png'
 
 import { BoxLogout, ImgLogout } from './style'

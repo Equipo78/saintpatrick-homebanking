@@ -1,4 +1,4 @@
-import BackgroundLogout from 'components/BackgroundLogout'
+import BackgroundLogout from 'components/BackgroundLogout/BackgroundLogout'
 import Header from 'components/Header/Header'
 import { Wrapper } from 'GlobalStyle'
 
