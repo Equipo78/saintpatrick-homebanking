@@ -1,6 +1,6 @@
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components'
 
-const { createGlobalStyle, default: styled } = require("styled-components");
+const { createGlobalStyle, default: styled } = require('styled-components')
 
 export const GlobalStyle = createGlobalStyle`
 *{
@@ -13,13 +13,13 @@ export const GlobalStyle = createGlobalStyle`
   --primary: #005758;
   --secondary: #F7C548;
 }
-`;
+`
 
 export const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   max-height: 100vh;
-`;
+`
 
 export const WrapperBackground = styled.div`
   grid-column: 1/-1;
@@ -33,7 +33,7 @@ export const WrapperBackground = styled.div`
   height: 100%;
   min-height: 100vh;
   object-fit: cover;
-`;
+`
 
 export const MainLayoutGrid = styled.div`
   min-height: 100vh;
@@ -41,14 +41,14 @@ export const MainLayoutGrid = styled.div`
   grid-template-columns: 0.6fr 2.4fr;
   grid-template-rows: 0.2fr 2.8fr;
   grid-template-areas:
-    "header header"
-    "navbar main";
+    'header header'
+    'navbar main';
   @media (max-width: 990px) {
     grid-template-areas:
-      "header header"
-      "main main";
+      'header header'
+      'main main';
   }
-`;
+`
 
 export const GridLogin = styled.div`
   display: grid;
@@ -59,7 +59,7 @@ export const GridLogin = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.4fr 1fr;
   }
-`;
+`
 
 //  animations
 export const fadeIn = keyframes`
@@ -69,4 +69,4 @@ export const fadeIn = keyframes`
  to {
   opacity: 1
  }
-`;
+`

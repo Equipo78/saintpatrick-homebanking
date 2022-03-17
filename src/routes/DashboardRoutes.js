@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom";
-import { MainLayoutGrid } from "GlobalStyle";
-import Header from "components/Header/Header";
-import NavBar from "components/NavBar/NavBar";
-import StepperContainer from "components/Transactions/StepperContainer";
+import { Routes, Route } from 'react-router-dom'
+import { MainLayoutGrid } from 'GlobalStyle'
+import Header from 'components/Header/Header'
+import NavBar from 'components/NavBar/NavBar'
+import StepperContainer from 'components/Transactions/StepperContainer'
 
 const DashboardRoutes = () => {
   return (
@@ -11,10 +11,10 @@ const DashboardRoutes = () => {
       <NavBar />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/transactions" element={<StepperContainer />} />
+        <Route element={<StepperContainer />} path="/transactions" />
       </Routes>
     </MainLayoutGrid>
-  );
-};
+  )
+}
 
-export default DashboardRoutes;
+export default DashboardRoutes

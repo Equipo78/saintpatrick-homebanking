@@ -1,7 +1,9 @@
-//  context
-import { useContext } from "react";
-import TransactionsContext from "context/TransactionsContext";
-//  styles
+import { useContext } from 'react'
+import TransactionsContext from 'context/TransactionsContext'
+import { InputAdornment } from '@mui/material'
+
+import { MainButton, TextButton } from '../Buttons/styles'
+
 import {
   BoxTransaction,
   ContainerTransactions,
@@ -11,12 +13,10 @@ import {
   InputContainer,
   IconInput,
   TextBack,
-} from "./styles";
-import { MainButton, TextButton } from "../Buttons/styles";
-import { InputAdornment } from "@mui/material";
+} from './styles'
 
 const SecondStep = () => {
-  const { setStep } = useContext(TransactionsContext);
+  const { setStep } = useContext(TransactionsContext)
 
   return (
     <ContainerTransactions>
@@ -26,9 +26,9 @@ const SecondStep = () => {
         <InputContainer>
           <IconInput>$</IconInput>
           <InputAmount
+            endAdornment={<InputAdornment position="end">ARS</InputAdornment>}
             id="outlined-adornment"
             placeholder="Ingresá el monto"
-            endAdornment={<InputAdornment position="end">ARS</InputAdornment>}
           />
         </InputContainer>
       </BoxTransaction>
@@ -39,7 +39,7 @@ const SecondStep = () => {
         </MainButton>
       </ContainerButton>
     </ContainerTransactions>
-  );
-};
+  )
+}
 
-export default SecondStep;
+export default SecondStep

@@ -1,6 +1,5 @@
-import { OutlinedInput, Stepper, TextField } from "@mui/material";
-
-const { default: styled } = require("styled-components");
+import { OutlinedInput, Stepper, TextField } from '@mui/material'
+import styled from 'styled-components'
 
 export const WrapperTransactions = styled.div`
   grid-area: main;
@@ -11,7 +10,7 @@ export const WrapperTransactions = styled.div`
     flex-direction: column;
     margin: 4rem 1.5rem 0 1.5rem;
   }
-`;
+`
 
 export const ContainerTransactions = styled.div`
   flex: 1;
@@ -19,7 +18,7 @@ export const ContainerTransactions = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
-`;
+`
 
 export const BoxTransaction = styled.div`
   max-width: 40rem;
@@ -29,10 +28,10 @@ export const BoxTransaction = styled.div`
   @media (max-width: 550px) {
     box-shadow: none;
   }
-`;
+`
 
 export const TitleTransaction = styled.h2`
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -41,7 +40,7 @@ export const TitleTransaction = styled.h2`
     border-bottom: none;
     padding: 1.4rem 0;
   }
-`;
+`
 
 export const ContainerButton = styled.div`
   display: flex;
@@ -56,19 +55,19 @@ export const ContainerButton = styled.div`
     align-items: flex-end;
     margin-bottom: 2rem;
   }
-`;
+`
 
 export const TextBack = styled.h3`
   cursor: pointer;
   color: var(--primary);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   padding: 1rem 2rem 0 0;
   @media (max-width: 550px) {
     padding-top: 0 !important;
     padding-bottom: 0.7rem;
   }
-`;
+`
 
 export const StepperWrapper = styled(Stepper)`
   flex: 0.3;
@@ -93,7 +92,7 @@ export const StepperWrapper = styled(Stepper)`
       margin-right: 0 !important;
     }
   }
-`;
+`
 
 //  first step
 export const InputCBU = styled(TextField)`
@@ -106,7 +105,7 @@ export const InputCBU = styled(TextField)`
     width: 100%;
     margin: 0 !important;
   }
-`;
+`
 
 //  second step
 export const InputAmount = styled(OutlinedInput)`
@@ -117,7 +116,7 @@ export const InputAmount = styled(OutlinedInput)`
     width: 100%;
     margin: 0 !important;
   }
-`;
+`
 
 export const InputContainer = styled.div`
   display: flex;
@@ -126,11 +125,11 @@ export const InputContainer = styled.div`
   @media (max-width: 550px) {
     margin: 0 !important;
   }
-`;
+`
 
 export const IconInput = styled.div`
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.9rem;
   margin-right: 1.2rem;
-`;
+`

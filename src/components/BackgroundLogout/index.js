@@ -1,20 +1,19 @@
-//  styles
-import { WrapperBackground } from "GlobalStyle";
-import { BoxLogout, ImgLogout } from "./style";
-//  components
-import LogoutContainer from "components/LogoutContainer";
-//  images
-import background from "assets/background-logout/background.png";
+import { WrapperBackground } from 'GlobalStyle'
+import LogoutContainer from 'components/LogoutContainer'
+import background from 'assets/background-logout/background.png'
+
+import { BoxLogout, ImgLogout } from './style'
 
 const BackgroundLogout = () => {
   return (
     <>
-      <WrapperBackground position="left" background={background} />
+      <WrapperBackground background={background} position="left" />
       <BoxLogout>
         <ImgLogout />
         <LogoutContainer />
       </BoxLogout>
     </>
-  );
-};
-export default BackgroundLogout;
+  )
+}
+
+export default BackgroundLogout

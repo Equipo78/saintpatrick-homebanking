@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import bgleft from "assets/background-login/bg-img1.png";
-import bgcenter from "assets/background-login/bg-img2.png";
+import styled from 'styled-components'
+import bgleft from 'assets/background-login/bg-img1.png'
+import bgcenter from 'assets/background-login/bg-img2.png'
 
 export const BackgroundImgLeft = styled.div`
   grid-column: 1;
@@ -26,7 +26,7 @@ export const BackgroundImgLeft = styled.div`
     width: 300px;
     height: 200px;
   }
-`;
+`
 
 export const BackgroundImgCenter = styled.div`
   grid-column: 2;
@@ -40,14 +40,14 @@ export const BackgroundImgCenter = styled.div`
   @media (max-width: 1200px) {
     display: none;
   }
-`;
+`
 
 export const Title = styled.h1`
   grid-column: 1 / span 2;
   grid-row: 1;
   place-self: center;
   width: 90%;
-  font-family: "Bona Nova", serif;
+  font-family: 'Bona Nova', serif;
   font-weight: 400;
   font-size: 3.2rem;
   @media (max-width: 600px) {
@@ -56,4 +56,4 @@ export const Title = styled.h1`
   @media (max-width: 400px) {
     font-size: 1.8rem;
   }
-`;
+`

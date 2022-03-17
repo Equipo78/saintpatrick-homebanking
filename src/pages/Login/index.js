@@ -1,35 +1,32 @@
-//  hooks
-import useMediaQuery from "hooks/useMediaQuery";
-import { useEffect, useState } from "react";
-//  components
-import BackgroundLogin from "components/BackgroundLogin";
-import LoginContainer from "components/LoginContainer";
-import Header from "components/Header/Header";
-import Loader from "components/Loader/Loader";
-//  styles
-import { GridLogin, Wrapper } from "GlobalStyle";
+import useMediaQuery from 'hooks/useMediaQuery'
+import { useEffect, useState } from 'react'
+import BackgroundLogin from 'components/BackgroundLogin'
+import LoginContainer from 'components/LoginContainer'
+import Header from 'components/Header/Header'
+import Loader from 'components/Loader/Loader'
+import { GridLogin, Wrapper } from 'GlobalStyle'
 
 const Login = () => {
-  const [firstPage, setFirstPage] = useState(true);
-  const [loader, setLoader] = useState(true);
+  const [firstPage, setFirstPage] = useState(true)
+  const [loader, setLoader] = useState(true)
 
-  const isMobile = useMediaQuery("(max-width: 920px)");
+  const isMobile = useMediaQuery('(max-width: 920px)')
 
   useEffect(() => {
     if (isMobile) {
       const timer = setTimeout(() => {
-        setFirstPage(false);
-      }, 2000);
+        setFirstPage(false)
+      }, 2000)
 
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer)
     }
-  }, [isMobile]);
+  }, [isMobile])
 
   useEffect(() => {
     setTimeout(() => {
-      setLoader(false);
-    }, 500);
-  }, [loader]);
+      setLoader(false)
+    }, 500)
+  }, [loader])
 
   return (
     <Wrapper>
@@ -45,7 +42,7 @@ const Login = () => {
         )}
       </GridLogin>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

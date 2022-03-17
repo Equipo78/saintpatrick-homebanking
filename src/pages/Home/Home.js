@@ -1,4 +1,12 @@
-import React from "react";
+import TopDecor2 from 'assets/background-main/TopDecor2.svg'
+import Copy from 'assets/icons_svg/Copy.svg'
+import Visible from 'assets/icons_svg/Visible.svg'
+// import Oculto from "assets/icons_svg/Oculto.svg";
+import Transferencia from 'assets/icons_svg/Icon/Transferencia.svg'
+import TransferenciaWhite from 'assets/icons_svg/Icon/TransferenciaWhite.svg'
+import Tarjetas from 'assets/icons_svg/Icon/Tarjetas.svg'
+import Comprobantes from 'assets/icons_svg/Icon/Comprobantes.svg'
+
 import {
   CardContainer,
   TitleH3,
@@ -15,22 +23,14 @@ import {
   HomeSaldo,
   HomeMovimientos,
   HomeAcciones,
-} from "./styles";
-import TopDecor2 from "../../assets/background-main/TopDecor2.svg";
-import Copy from "../../assets/icons_svg/Copy.svg";
-import Visible from "../../assets/icons_svg/Visible.svg";
-// import Oculto from "../../assets/icons_svg/Oculto.svg";
-import Transferencia from "../../assets/icons_svg/Icon/Transferencia.svg";
-import TransferenciaWhite from "../../assets/icons_svg/Icon/TransferenciaWhite.svg";
-import Tarjetas from "../../assets/icons_svg/Icon/Tarjetas.svg";
-import Comprobantes from "../../assets/icons_svg/Icon/Comprobantes.svg";
+} from './styles'
 
 const Home = () => {
   return (
     <HomeGridLayout>
       <HomeInfo>
         <TitleH3>Tu cuenta</TitleH3>
-        <ContentContainer width="100%" flexAlignItems="center" gap="0 3rem">
+        <ContentContainer flexAlignItems="center" gap="0 3rem" width="100%">
           <PText margin="0.5rem 0">CBU: 00454545557879</PText>
           <Icon src={Copy} />
         </ContentContainer>
@@ -40,12 +40,7 @@ const Home = () => {
           <CardTopDecor src={TopDecor2} />
           <CardWrapper margin="2rem 3rem 0">
             <TitleH3>Saldo</TitleH3>
-            <ContentContainer
-              width="100%"
-              flexDirection="row"
-              flexAlignItems="center"
-              gap="2rem"
-            >
+            <ContentContainer flexAlignItems="center" flexDirection="row" gap="2rem" width="100%">
               <PText size="32px">$45.000</PText>
               <Icon src={Visible} />
             </ContentContainer>
@@ -56,17 +51,17 @@ const Home = () => {
         <CardContainer>
           <Ul flexDirection="column" gap="2rem" padding="2rem 3rem 1rem">
             <ContentContainer
-              width="100%"
-              flexJustify="space-around"
               flexAlignItems="center"
+              flexJustify="space-around"
               gap="0 3rem"
+              width="100%"
             >
               <Li>
                 <ContentContainer
-                  width="100%"
-                  flexDirection="column"
                   flexAlignItems="center"
+                  flexDirection="column"
                   gap="0 3rem"
+                  width="100%"
                 >
                   <IconBg backgroundColor="#F7C548">
                     <Icon src={Transferencia} />
@@ -76,10 +71,10 @@ const Home = () => {
               </Li>
               <Li>
                 <ContentContainer
-                  width="100%"
-                  flexDirection="column"
                   flexAlignItems="center"
+                  flexDirection="column"
                   gap="0 3rem"
+                  width="100%"
                 >
                   <IconBg backgroundColor="#F7C548">
                     <Icon src={Comprobantes} />
@@ -89,10 +84,10 @@ const Home = () => {
               </Li>
               <Li>
                 <ContentContainer
-                  width="100%"
-                  flexDirection="column"
                   flexAlignItems="center"
+                  flexDirection="column"
                   gap="0 3rem"
+                  width="100%"
                 >
                   <IconBg backgroundColor="#F7C548">
                     <Icon src={Tarjetas} />
@@ -102,17 +97,17 @@ const Home = () => {
               </Li>
             </ContentContainer>
             <ContentContainer
-              width="100%"
-              flexJustify="space-around"
               flexAlignItems="center"
+              flexJustify="space-around"
               gap="0 3rem"
+              width="100%"
             >
               <Li>
                 <ContentContainer
-                  width="100%"
-                  flexDirection="column"
                   flexAlignItems="center"
+                  flexDirection="column"
                   gap="0 3rem"
+                  width="100%"
                 >
                   <IconBg backgroundColor="#F7C548">
                     <Icon src={Transferencia} />
@@ -122,10 +117,10 @@ const Home = () => {
               </Li>
               <Li>
                 <ContentContainer
-                  width="100%"
-                  flexDirection="column"
                   flexAlignItems="center"
+                  flexDirection="column"
                   gap="0 3rem"
+                  width="100%"
                 >
                   <IconBg backgroundColor="#F7C548">
                     <Icon src={Comprobantes} />
@@ -135,10 +130,10 @@ const Home = () => {
               </Li>
               <Li>
                 <ContentContainer
-                  width="100%"
-                  flexDirection="column"
                   flexAlignItems="center"
+                  flexDirection="column"
                   gap="0 3rem"
+                  width="100%"
                 >
                   <IconBg backgroundColor="#F7C548">
                     <Icon src={Tarjetas} />
@@ -154,146 +149,121 @@ const Home = () => {
         <CardContainer>
           <CardWrapper margin="2rem 3rem">
             <TitleH3>Ultimos movimientos</TitleH3>
-            <Ul
-              flexDirection="column"
-              flexAlignItems="stretch"
-              padding="0"
-              gap="1.5rem"
-            >
+            <Ul flexAlignItems="stretch" flexDirection="column" gap="1.5rem" padding="0">
               <Li>
-                <ContentContainer
-                  width="70%"
-                  flexAlignItems="center"
-                  gap="1.5rem"
-                >
+                <ContentContainer flexAlignItems="center" gap="1.5rem" width="70%">
                   <IconBg backgroundColor="#005758">
                     <Icon src={TransferenciaWhite} />
                   </IconBg>
                   <PText>Te transfirieron dinero</PText>
                 </ContentContainer>
                 <ContentContainer
-                  width="30%"
-                  flexDirection="column"
                   flexAlignItems="flex-end"
+                  flexDirection="column"
                   gap="0"
+                  width="30%"
                 >
-                  <PText weight="600" margin="0 0 0.5rem">
+                  <PText margin="0 0 0.5rem" weight="600">
                     $2.000
                   </PText>
-                  <PText size="12px" margin="0">
+                  <PText margin="0" size="12px">
                     12/01
                   </PText>
                 </ContentContainer>
               </Li>
               <Li>
-                <ContentContainer
-                  width="70%"
-                  flexAlignItems="center"
-                  gap="1.5rem"
-                >
+                <ContentContainer flexAlignItems="center" gap="1.5rem" width="70%">
                   <IconBg backgroundColor="#005758">
                     <Icon src={TransferenciaWhite} />
                   </IconBg>
                   <PText>Transferiste dinero</PText>
                 </ContentContainer>
                 <ContentContainer
-                  width="30%"
-                  flexDirection="column"
                   flexAlignItems="flex-end"
+                  flexDirection="column"
                   gap="0"
+                  width="30%"
                 >
-                  <PText weight="600" margin="0 0 0.5rem">
+                  <PText margin="0 0 0.5rem" weight="600">
                     $650
                   </PText>
-                  <PText size="12px" margin="0">
+                  <PText margin="0" size="12px">
                     12/01
                   </PText>
                 </ContentContainer>
               </Li>
               <Li>
-                <ContentContainer
-                  width="70%"
-                  flexAlignItems="center"
-                  gap="1.5rem"
-                >
+                <ContentContainer flexAlignItems="center" gap="1.5rem" width="70%">
                   <IconBg backgroundColor="#005758">
                     <Icon src={TransferenciaWhite} />
                   </IconBg>
                   <PText>Pago AFIP</PText>
                 </ContentContainer>
                 <ContentContainer
-                  width="30%"
-                  flexDirection="column"
                   flexAlignItems="flex-end"
+                  flexDirection="column"
                   gap="0"
+                  width="30%"
                 >
-                  <PText weight="600" margin="0 0 0.5rem">
+                  <PText margin="0 0 0.5rem" weight="600">
                     $16.650
                   </PText>
-                  <PText size="12px" margin="0">
+                  <PText margin="0" size="12px">
                     12/12
                   </PText>
                 </ContentContainer>
               </Li>
               <Li>
-                <ContentContainer
-                  width="70%"
-                  flexAlignItems="center"
-                  gap="1.5rem"
-                >
+                <ContentContainer flexAlignItems="center" gap="1.5rem" width="70%">
                   <IconBg backgroundColor="#005758">
                     <Icon src={TransferenciaWhite} />
                   </IconBg>
                   <PText>Te transfirieron dinero</PText>
                 </ContentContainer>
                 <ContentContainer
-                  width="30%"
-                  flexDirection="column"
                   flexAlignItems="flex-end"
+                  flexDirection="column"
                   gap="0"
+                  width="30%"
                 >
-                  <PText weight="600" margin="0 0 0.5rem">
+                  <PText margin="0 0 0.5rem" weight="600">
                     $650
                   </PText>
-                  <PText size="12px" margin="0">
+                  <PText margin="0" size="12px">
                     05/12
                   </PText>
                 </ContentContainer>
               </Li>
               <Li>
-                <ContentContainer
-                  width="70%"
-                  flexAlignItems="center"
-                  gap="1.5rem"
-                >
+                <ContentContainer flexAlignItems="center" gap="1.5rem" width="70%">
                   <IconBg backgroundColor="#005758">
                     <Icon src={TransferenciaWhite} />
                   </IconBg>
                   <PText>Transferiste dinero</PText>
                 </ContentContainer>
                 <ContentContainer
-                  width="30%"
-                  flexDirection="column"
                   flexAlignItems="flex-end"
+                  flexDirection="column"
                   gap="0"
+                  width="30%"
                 >
-                  <PText weight="600" margin="0 0 0.5rem">
+                  <PText margin="0 0 0.5rem" weight="600">
                     $1.650
                   </PText>
-                  <PText size="12px" margin="0">
+                  <PText margin="0" size="12px">
                     12/11
                   </PText>
                 </ContentContainer>
               </Li>
             </Ul>
-            <ContentContainer width="100%" flexJustify="flex-end">
+            <ContentContainer flexJustify="flex-end" width="100%">
               <PText margin="3rem 0">Ver mas</PText>
             </ContentContainer>
           </CardWrapper>
         </CardContainer>
       </HomeMovimientos>
     </HomeGridLayout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

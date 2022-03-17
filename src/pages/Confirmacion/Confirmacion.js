@@ -1,9 +1,8 @@
-import React from "react";
-import Loading from "../../assets/loader/Loading.svg";
-import Success from "../../assets/loader/Success.svg";
-import Saldos from "../../assets/icons_svg/Icon/Saldos.svg";
-import Calendar from "../../assets/icons_svg/Calendar.svg";
-import TopDecor1 from "../../assets/background-main/TopDecor1.svg";
+import Loading from 'assets/loader/Loading.svg'
+import Saldos from 'assets/icons_svg/Icon/Saldos.svg'
+import Calendar from 'assets/icons_svg/Calendar.svg'
+import TopDecor1 from 'assets/background-main/TopDecor1.svg'
+
 import {
   ConfirmacionGridLayout,
   ConfirmacionCard,
@@ -16,7 +15,7 @@ import {
   IconBg,
   Icon,
   Img,
-} from "./styles";
+} from './styles'
 
 const Confirmacion = () => {
   return (
@@ -25,16 +24,16 @@ const Confirmacion = () => {
         <CardContainer>
           <CardTopDecor src={TopDecor1} />
           <ContentContainer
-            flexDirection="column"
             flexAlignItems="center"
+            flexDirection="column"
             flexJustify="flex-start"
             margin="2rem"
           >
-            <Img src={Loading}></Img>
+            <Img src={Loading} />
             <TitleH3 margin="2rem 0">Realizando transferencia...</TitleH3>
             <ContentContainer
-              flexDirection="column"
               flexAlignItems="flex-start"
+              flexDirection="column"
               flexJustify="flex-start"
             >
               <ContentContainer flexAlignItems="center" gap="0.5rem">
@@ -55,7 +54,7 @@ const Confirmacion = () => {
       </ConfirmacionCard>
       <ConfirmacionBtns>
         <ContentContainer flexJustify="flex-end" gap="1rem">
-          <PText weight="600" color="#005758">
+          <PText color="#005758" weight="600">
             Volver al Inicio
           </PText>
           <ContentContainer flexAlignItems="center" flexJustify="center">
@@ -68,7 +67,7 @@ const Confirmacion = () => {
         </ContentContainer>
       </ConfirmacionBtns>
     </ConfirmacionGridLayout>
-  );
-};
+  )
+}
 
-export default Confirmacion;
+export default Confirmacion

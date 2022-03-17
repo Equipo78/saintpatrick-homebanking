@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 const useMediaQuery = (query) => {
-  const [matches, setMatches] = useState(false);
+  const [matches, setMatches] = useState(false)
 
   useEffect(() => {
-    const media = window.matchMedia(query);
+    const media = window.matchMedia(query)
 
     if (media.matches !== matches) {
-      setMatches(media.matches);
+      setMatches(media.matches)
     }
 
-    const listener = () => setMatches(media.matches);
-    window.addEventListener("resize", listener);
+    const listener = () => setMatches(media.matches)
 
-    return () => window.removeEventListener("resize", listener);
-  }, [matches, query]);
-  return matches;
-};
+    window.addEventListener('resize', listener)
 
-export default useMediaQuery;
+    return () => window.removeEventListener('resize', listener)
+  }, [matches, query])
+
+  return matches
+}
+
+export default useMediaQuery

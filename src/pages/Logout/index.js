@@ -1,6 +1,6 @@
-import BackgroundLogout from "components/BackgroundLogout";
-import Header from "components/Header/Header";
-import { Wrapper } from "GlobalStyle";
+import BackgroundLogout from 'components/BackgroundLogout'
+import Header from 'components/Header/Header'
+import { Wrapper } from 'GlobalStyle'
 
 const Logout = () => {
   return (
@@ -8,7 +8,7 @@ const Logout = () => {
       <Header height="4.4rem" />
       <BackgroundLogout />
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Logout;
+export default Logout

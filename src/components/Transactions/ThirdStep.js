@@ -1,17 +1,18 @@
-//  styles
+import { useContext } from 'react'
+import TransactionsContext from 'context/TransactionsContext'
+
+import { MainButton, TextButton } from '../Buttons/styles'
+
 import {
   BoxTransaction,
   ContainerTransactions,
   TitleTransaction,
   ContainerButton,
   TextBack,
-} from "./styles";
-import { MainButton, TextButton } from "../Buttons/styles";
-import { useContext } from "react";
-import TransactionsContext from "context/TransactionsContext";
+} from './styles'
 
 const ThirdStep = () => {
-  const { setStep } = useContext(TransactionsContext);
+  const { setStep } = useContext(TransactionsContext)
 
   return (
     <ContainerTransactions>
@@ -34,14 +35,14 @@ const ThirdStep = () => {
           </DataUser>
         </ContainerDataTransaction> */}
       </BoxTransaction>
-      <ContainerButton padleft='20rem'>
+      <ContainerButton padleft="20rem">
         <TextBack onClick={() => setStep(2)}>Volver</TextBack>
         <MainButton width="15rem">
           <TextButton>CONFIRMAR TRANSFERENCIA</TextButton>
         </MainButton>
       </ContainerButton>
     </ContainerTransactions>
-  );
-};
+  )
+}
 
-export default ThirdStep;
+export default ThirdStep

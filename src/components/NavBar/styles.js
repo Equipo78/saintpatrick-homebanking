@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const NavBarContainer = styled.nav`
   grid-area: navbar;
-  display: ${props => props.display};
+  display: ${(props) => props.display};
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -13,7 +13,7 @@ export const NavBarContainer = styled.nav`
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
   min-width: 225px;
-`;
+`
 
 export const NavBarUl = styled.ul`
   display: flex;
@@ -22,7 +22,7 @@ export const NavBarUl = styled.ul`
   gap: 2rem;
   margin: 0;
   padding: 0;
-`;
+`
 
 export const NavBarLi = styled.li`
   display: flex;
@@ -30,15 +30,15 @@ export const NavBarLi = styled.li`
   justify-content: flex-start;
   gap: 1rem;
   cursor: pointer;
-`;
+`
 
 const NavBarImg = styled.img`
   width: 23px;
   height: 23px;
-`;
+`
 
-export const NavBarIcon = styled(NavBarImg)``;
+export const NavBarIcon = styled(NavBarImg)``
 
 export const SpaceBreak = styled.div`
   height: 3rem;
-`;
+`

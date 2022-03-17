@@ -1,6 +1,6 @@
-//  styles
-import { Title, Wrapper } from "./styles";
-import { MainButton, TextButton, Arrow } from "../Buttons/styles";
+import { MainButton, TextButton, Arrow } from '../Buttons/styles'
+
+import { Title, Wrapper } from './styles'
 
 const LogoutContainer = () => {
   return (
@@ -11,7 +11,7 @@ const LogoutContainer = () => {
         <Arrow />
       </MainButton>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default LogoutContainer;
+export default LogoutContainer

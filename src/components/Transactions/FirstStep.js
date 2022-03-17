@@ -1,18 +1,18 @@
-//  context
-import { useContext } from "react";
-import TransactionsContext from "context/TransactionsContext";
-//  styles
+import { useContext } from 'react'
+import TransactionsContext from 'context/TransactionsContext'
+
+import { MainButton, TextButton } from '../Buttons/styles'
+
 import {
   BoxTransaction,
   ContainerTransactions,
   TitleTransaction,
   ContainerButton,
   InputCBU,
-} from "./styles";
-import { MainButton, TextButton } from "../Buttons/styles";
+} from './styles'
 
 function FirstStep() {
-  const { setStep } = useContext(TransactionsContext);
+  const { setStep } = useContext(TransactionsContext)
 
   return (
     <ContainerTransactions>
@@ -21,13 +21,13 @@ function FirstStep() {
         <InputCBU id="outlined-basic" label="Ingresá el número de CBU" />
       </BoxTransaction>
 
-      <ContainerButton padleft='32rem'>
+      <ContainerButton padleft="32rem">
         <MainButton width="8rem" onClick={() => setStep(2)}>
           <TextButton>CONTINUAR</TextButton>
         </MainButton>
       </ContainerButton>
     </ContainerTransactions>
-  );
+  )
 }
 
-export default FirstStep;
+export default FirstStep

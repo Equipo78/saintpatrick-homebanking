@@ -1,10 +1,10 @@
-import { ArrowForwardOutlined } from "@mui/icons-material";
-import styled from "styled-components";
+import { ArrowForwardOutlined } from '@mui/icons-material'
+import styled from 'styled-components'
 
 export const MainButton = styled.button`
   cursor: pointer;
   display: flex;
-  width: ${props => props.width };
+  width: ${(props) => props.width};
   outline: none;
   border: none;
   padding: 1rem;
@@ -17,16 +17,16 @@ export const MainButton = styled.button`
   :hover {
     background-color: #008889;
   }
-`;
+`
 
 export const TextButton = styled.p`
   display: flex;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   justify-content: center;
   width: 100%;
-`;
+`
 
 export const Arrow = styled(ArrowForwardOutlined)`
   color: var(--secondary);
-`;
+`
