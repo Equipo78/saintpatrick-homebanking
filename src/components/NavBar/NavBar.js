@@ -18,13 +18,15 @@ import {
   SpaceBreak,
   PText,
   ContentContainer,
+  Close,
 } from './styles'
 
 const NavBar = () => {
-  const isDesktop = useMediaQuery('(min-width: 990px)')
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
 
   return (
     <NavBarContainer display={isDesktop ? 'flex' : 'none'}>
+      <Close fontSize="large" />
       <NavBarUl>
         <NavBarLi>
           <ALink to="/">

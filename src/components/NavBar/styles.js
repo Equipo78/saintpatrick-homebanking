@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import CloseIcon from '@mui/icons-material/Close'
 
 export const NavBarContainer = styled.nav`
   grid-area: navbar;
@@ -13,7 +14,21 @@ export const NavBarContainer = styled.nav`
   font-size: 1rem;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
-  min-width: 225px;
+  width: 100%;
+  @media (max-width: 1000px) {
+    padding: 2rem 0;
+    display: fixed;
+    overflow: hidden;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #005758;
+    color: #fff;
+    // width: 100%;
+    height: 100%;
+    z-index: 9999;
+    font-size: 1rem;
+  }
 `
 
 export const NavBarUl = styled.ul`
@@ -37,7 +52,9 @@ const NavBarImg = styled.img`
   height: 23px;
 `
 
-export const NavBarIcon = styled(NavBarImg)``
+export const NavBarIcon = styled(NavBarImg)`
+  filter: invert(1);
+`
 
 export const SpaceBreak = styled.div`
   height: 1rem;
@@ -49,6 +66,9 @@ export const PText = styled.p`
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
   cursor: ${(props) => props.cursor};
+  @media (max-width: 1000px) {
+    font-size: inherit;
+  }
 `
 
 export const ContentContainer = styled.div`
@@ -65,4 +85,23 @@ export const ALink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: #00000;
+  text-decoration: none;
+  @media (max-width: 1000px) {
+    color: #fff;
+    text-decoration: none;
+  }
+`
+
+export const Close = styled(CloseIcon)`
+  color: #fff;
+  display: none;
+  visibility: none;
+  opacity: 0;
+  @media (max-width: 1000px) {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    margin: 0 15rem 3rem 0;
+  }
 `
