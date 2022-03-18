@@ -119,7 +119,7 @@ export const IconBg = styled.div`
 `
 
 const HomeImg = styled.img`
-  width: auto
+  width: auto;
   height: auto;
 `
 

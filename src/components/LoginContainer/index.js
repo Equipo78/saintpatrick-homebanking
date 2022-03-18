@@ -70,7 +70,7 @@ const LoginContainer = () => {
           onChange={handleChange('password')}
         />
       </Form>
-      
+
       <ALink to="/">
         <MainButton width="100%">
           <TextButton>INICIAR SESION</TextButton>

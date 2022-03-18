@@ -36,7 +36,7 @@ const ThirdStep = () => {
           </DataUser>
         </ContainerDataTransaction> */}
       </BoxTransaction>
-      <ContainerButton padleft='20rem'>
+      <ContainerButton padleft="20rem">
         <TextBack onClick={() => setStep(2)}>Volver</TextBack>
         <ALink to="/confirmacion">
           <MainButton width="15rem">
@@ -45,7 +45,7 @@ const ThirdStep = () => {
         </ALink>
       </ContainerButton>
     </ContainerTransactions>
-  );
-};
+  )
+}
 
-export default ThirdStep;
+export default ThirdStep

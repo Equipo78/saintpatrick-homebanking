@@ -1,5 +1,5 @@
-import { OutlinedInput, Stepper, TextField } from "@mui/material";
-import { Link } from "react-router-dom";
+import { OutlinedInput, Stepper, TextField } from '@mui/material'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const WrapperTransactions = styled.div`

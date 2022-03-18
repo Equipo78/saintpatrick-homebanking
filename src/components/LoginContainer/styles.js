@@ -84,7 +84,7 @@ export const Input = styled(OutlinedInput)`
   border-radius: 8px !important;
   padding-left: 2rem !important;
   background-color: #ffffff;
-`;
+`
 
 export const ButtonSubmit = styled.button`
   cursor: pointer;
@@ -102,19 +102,19 @@ export const ButtonSubmit = styled.button`
   :hover {
     background-color: #008889;
   }
-`;
+`
 
 export const TextButton = styled.p`
   display: flex;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   justify-content: center;
   width: 100%;
-`;
+`
 
 export const Arrow = styled(ArrowForwardOutlined)`
   color: var(--secondary);
-`;
+`
 
 export const ALink = styled(Link)`
   display: flex;
