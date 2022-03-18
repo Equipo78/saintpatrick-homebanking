@@ -12,6 +12,7 @@ import {
   TextButton,
   Arrow,
   LoginTitle,
+  ALink,
 } from "./styles";
 import { useState } from "react";
 import { VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
@@ -82,11 +83,12 @@ const LoginContainer = () => {
             label="Ingresá el PINasdas"
           />
         </Form>
-
-        <ButtonSubmit>
-          <TextButton>INICIAR SESIÓN</TextButton>
-          <Arrow />
-        </ButtonSubmit>
+        {/* <ALink to="/"> */}
+          <ButtonSubmit>
+            <TextButton>INICIAR SESIÓN</TextButton>
+            <Arrow />
+          </ButtonSubmit>
+        {/* </ALink> */}
       </Wrapper>
     </>
   );

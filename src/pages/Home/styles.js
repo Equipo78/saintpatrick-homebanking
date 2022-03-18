@@ -1,15 +1,17 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 
 export const HomeGridLayout = styled.div`
   display: grid;
   grid-template-columns: 0.2fr 0.8fr;
-  grid-template-rows: 0.2fr 0.2fr 0.6fr;
+  grid-template-rows: 0.1fr 0.3fr 0.6fr;
   grid-template-areas:
     "top top"
     "box-1 box-2"
     "box-3 box-2";
-  gap: 3rem;
-  padding: 1rem 3rem 0;
+  gap: 2rem;
+  padding: 2rem 3rem;
   width: 100%;
 `;
 
@@ -64,15 +66,19 @@ export const ContentContainer = styled.div`
   align-items: ${(props) => props.flexAlignItems};
   justify-content: ${(props) => props.flexJustify};
   gap: ${(props) => props.gap};
+  margin: ${(props) => props.margin};
 `;
 
 export const PText = styled.p`
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   margin: ${(props) => props.margin};
+  color: ${(props) => props.color};
+  cursor: ${(props) => props.cursor};
 `;
 
 export const Ul = styled.ul`
+  width: 100%;
   display: flex;
   flex-direction: ${(props) => props.flexDirection};
   align-items: ${(props) => props.flexAlignItems};
@@ -81,12 +87,14 @@ export const Ul = styled.ul`
   margin: 0;
   padding: ${(props) => props.padding};
   text-align: center;
+
 `;
 
 export const Li = styled.li`
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: ${(props) => props.cursor};
 `;
 
 export const IconBg = styled.div`
@@ -100,8 +108,16 @@ export const IconBg = styled.div`
 `;
 
 const HomeImg = styled.img`
-  width: 23px;
-  height: 23px;
+  width: auto
+  height: auto;
 `;
 
-export const Icon = styled(HomeImg)``;
+export const Icon = styled(HomeImg)`
+  cursor: ${(props) => props.cursor};
+`;
+
+export const ALink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`

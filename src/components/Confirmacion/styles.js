@@ -1,24 +1,6 @@
 import styled from "styled-components";
-
-export const TransaccionesGridLayout = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.8fr;
-  grid-template-areas:
-    "box-1"
-    "box-2";
-  gap: 1rem;
-  padding: 1rem 3rem;
-  min-width: 55%;
-`;
-
-export const TransaccionesCuenta = styled.div`
-  grid-area: box-1;
-`;
-
-export const TransaccionesUltimas = styled.div`
-  grid-area: box-2;
-`;
+import { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const CardContainer = styled.div`
   background-color: rgba(255, 255, 255, 1);
@@ -32,6 +14,7 @@ export const CardContainer = styled.div`
   width: 100%;
   position: relative;
   padding: ${(props) => props.padding};
+  background-color: ${(props) => props.backgroundColor}
 `;
 
 export const TitleH3 = styled.h3`
@@ -45,10 +28,6 @@ export const CardImg = styled.img`
 `;
 
 export const CardTopDecor = styled(CardImg)``;
-
-export const CardWrapper = styled.div`
-  margin: ${(props) => props.margin};
-`;
 
 export const ContentContainer = styled.div`
   width: ${(props) => props.width};
@@ -70,43 +49,50 @@ export const PText = styled.p`
   cursor: ${(props) => props.cursor};
 `;
 
-export const Ul = styled.ul`
-  display: flex;
-  flex-direction: ${(props) => props.flexDirection};
-  align-items: ${(props) => props.flexAlignItems};
-  list-style-type: none;
-  gap: ${(props) => props.gap};
-  margin: 0;
-  padding: ${(props) => props.padding};
-  text-align: center;
-`;
-
-export const Li = styled.li`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`;
-
 export const IconBg = styled.div`
   width: 41px;
   height: 41px;
   background-color: ${(props) => props.backgroundColor};
+  border: ${(props) => props.border};
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 `;
 
-const HomeImg = styled.img`
-  width: auto;
-  height: auto;
+const IconImg = styled.img`
+  width: ${(props) => props.iconSize};
+  height: ${(props) => props.iconSize};
 `;
 
-export const Icon = styled(HomeImg)`
-  cursor: ${(props) => props.cursor};
+export const Icon = styled(IconImg)``;
+
+const MainImg = styled.img`
+  position: relative;
+
+`
+export const Img = styled(MainImg)``;
+
+export const ALink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  `
+
+export const LoaderAnimated = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 `;
 
-export const Line = styled.div`
-  border-top: ${(props) => props.border};
-  width: 100%;
+export const LoaderImg = styled.img`
+  position: absolute;
+  animation: ${LoaderAnimated} 1.2s linear infinite;
 `;
+
+
+

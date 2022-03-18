@@ -11,6 +11,7 @@ import {
   OutlinedInput,
 } from "@mui/material";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Title = styled.h1`
   position: absolute;
@@ -111,3 +112,9 @@ export const TextButton = styled.p`
 export const Arrow = styled(ArrowForwardOutlined)`
   color: var(--secondary);
 `;
+
+export const ALink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`

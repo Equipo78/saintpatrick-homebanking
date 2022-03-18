@@ -4,7 +4,9 @@ import {
   NavBarUl,
   NavBarLi,
   NavBarIcon,
+  ALink,
   SpaceBreak,
+  PText,
 } from "./styles";
 import Home from "../../assets/icons_svg/Icon/Home.svg";
 import Saldos from "../../assets/icons_svg/Icon/Saldos.svg";
@@ -21,41 +23,70 @@ const NavBar = () => {
     <NavBarContainer>
       <NavBarUl>
         <NavBarLi>
-          <NavBarIcon src={Home} />
-          Inicio
+          <ALink to="/">
+            <NavBarIcon src={Home} />
+            <PText size="14px">Inicio</PText>
+          </ALink>
         </NavBarLi>
         <NavBarLi>
-          <NavBarIcon src={Saldos} />
-          Saldos
+          <ALink to="/saldos">
+            <NavBarIcon src={Saldos} />
+            <PText size="14px">Saldos</PText>
+          </ALink>
         </NavBarLi>
         <NavBarLi>
-          <NavBarIcon src={Movimientos} />
-          Ultimos movimientos
+          <ALink to="/historial">
+            <NavBarIcon src={Movimientos} />
+            <PText size="14px">Ultimos movimientos</PText>
+          </ALink>
         </NavBarLi>
         <NavBarLi>
-          <NavBarIcon src={Transferencia} />
-          Transferencias
+          <ALink to="/transacciones">
+            <NavBarIcon src={Transferencia} />
+            <PText size="14px">Transferencias</PText>
+          </ALink>
         </NavBarLi>
         <NavBarLi>
-          <NavBarIcon src={Tarjetas} />
-          Tarjetas
+          <ALink to="/tarjetas">
+            <NavBarIcon src={Tarjetas} />
+            <PText size="14px">Tarjetas</PText>
+          </ALink>
         </NavBarLi>
         <NavBarLi>
-          <NavBarIcon src={Comprobantes} />
-          Comprobantes
+          <ALink to="/comprobantes">
+            <NavBarIcon src={Comprobantes} />
+            <PText size="14px">Comprobantes</PText>
+          </ALink>
         </NavBarLi>
         <NavBarLi>
-          <NavBarIcon src={Perfil} />
-          Contactos
+          <ALink to="/contactos">
+            <NavBarIcon src={Perfil} />
+            <PText size="14px">Contactos</PText>
+          </ALink>
         </NavBarLi>
         <SpaceBreak />
         <NavBarLi>
-          <NavBarIcon src={Ayuda} />
-          Centro de ayuda
+          <ALink to="/ayuda">
+            <NavBarIcon src={Ayuda} />
+            <PText size="14px">Centro de Ayuda</PText>
+          </ALink>
         </NavBarLi>
         <NavBarLi>
-          <NavBarIcon src={Salir} />
-          Cerrar sesion
+          <ALink to="/logout">
+            <NavBarIcon src={Salir} />
+            <PText size="14px">Cerrar sesion</PText>
+          </ALink>
+        </NavBarLi>
+        <SpaceBreak />
+        <NavBarLi>
+          <ALink to="/privacidad">
+            <PText size="10px">Politicas de privacidad</PText>
+          </ALink>
+        </NavBarLi>
+        <NavBarLi>
+          <ALink to="/terminos">
+            <PText size="10px">Terminos y condiciones</PText>
+          </ALink>
         </NavBarLi>
       </NavBarUl>
     </NavBarContainer>

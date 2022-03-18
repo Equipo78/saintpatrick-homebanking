@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const NavBarContainer = styled.nav`
   grid-area: navbar;
@@ -6,7 +7,7 @@ export const NavBarContainer = styled.nav`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem 1rem;
   background-color: rgba(0, 87, 88, 0.03);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
@@ -16,8 +17,7 @@ export const NavBarContainer = styled.nav`
 export const NavBarUl = styled.ul`
   display: flex;
   flex-direction: column;
-  list-style-type: none;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 `;
@@ -38,5 +38,19 @@ const NavBarImg = styled.img`
 export const NavBarIcon = styled(NavBarImg)``;
 
 export const SpaceBreak = styled.div`
-  height: 3rem;
+  height: 1rem;
 `;
+
+export const PText = styled.p`
+  font-size: ${(props) => props.size};
+  font-weight: ${(props) => props.weight};
+  margin: ${(props) => props.margin};
+  color: ${(props) => props.color};
+  cursor: ${(props) => props.cursor};
+`;
+
+export const ALink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`
