@@ -18,17 +18,19 @@ export const Wrapper = styled.div`
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   padding: 63px 45px;
   animation: ${fadeIn} 2s;
-  @media (max-width: 1200px) {
+  @media (max-width: 1290px) {
     grid-column: 2;
     grid-row: 2;
   }
-  @media (max-width: 920px) {
+  @media (max-width: 890px) {
+    padding: 63px 20px;
+  }
+  @media (max-width: 798px) {
     background: none;
     box-shadow: none;
     align-self: center;
     grid-column: 1/-1;
     grid-row: 1/-1;
-    padding: 0;
   }
 `
 

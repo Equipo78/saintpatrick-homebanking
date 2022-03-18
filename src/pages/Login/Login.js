@@ -10,7 +10,7 @@ const Login = () => {
   const [firstPage, setFirstPage] = useState(true)
   const [loader, setLoader] = useState(true)
 
-  const isMobile = useMediaQuery('(max-width: 920px)')
+  const isMobile = useMediaQuery('(max-width: 798px)')
 
   useEffect(() => {
     if (isMobile) {

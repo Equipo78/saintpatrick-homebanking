@@ -11,16 +11,17 @@ export const BackgroundImgLeft = styled.div`
   background-size: contain;
   width: 400px;
   height: 300px;
-  @media (max-width: 1200px) {
+  @media (max-width: 1290px) {
     place-self: start center;
     margin: 3rem 1rem 0 1rem;
   }
-  @media (max-width: 920px) {
-    grid-column: 1/-1;
-  }
-  @media (max-width: 500px) {
+  @media (max-width: 890px) {
     width: 350px;
     height: 250px;
+    margin-top: 3rem;
+  }
+  @media (max-width: 798px) {
+    grid-column: 1/-1;
   }
   @media (max-width: 350px) {
     width: 300px;
@@ -37,7 +38,7 @@ export const BackgroundImgCenter = styled.div`
   background-repeat: no-repeat;
   width: 340px;
   height: 370px;
-  @media (max-width: 1200px) {
+  @media (max-width: 1290px) {
     display: none;
   }
 `
@@ -45,7 +46,9 @@ export const BackgroundImgCenter = styled.div`
 export const Title = styled.h1`
   grid-column: 1 / span 2;
   grid-row: 1;
-  place-self: center;
+  justify-self: center;
+  align-self: end;
+  padding: 2rem 0;
   width: 90%;
   font-family: 'Bona Nova', serif;
   font-weight: 400;

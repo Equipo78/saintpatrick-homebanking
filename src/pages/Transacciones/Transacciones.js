@@ -60,10 +60,20 @@ const userData = [
 const favList = []
 
 const Transacciones = () => {
-  const [data, setData] = useState(userData)
+  const [
+    data,
+    {
+      /*setData*/
+    },
+  ] = useState(userData)
   const [addFavourite, setAddFavourite] = useState(favList)
   const [contacts, setContacts] = useState(true)
-  const [favorites, setFavorites] = useState(false)
+  const [
+    {
+      /*favorites*/
+    },
+    setFavorites,
+  ] = useState(false)
 
   useEffect(() => {
     data.map((item) => {
@@ -73,7 +83,7 @@ const Transacciones = () => {
 
       return data
     })
-  }, [])
+  }, [data])
 
   const handleContacts = (e) => {
     e.preventDefault()
@@ -86,7 +96,7 @@ const Transacciones = () => {
   const handleFavorites = (e) => {
     e.preventDefault()
     setFavorites((favorites) => !favorites)
-    console.log(favorites)
+    // console.log(favorites)
 
     //update data and addFavourite
     // setData((prevData) => {

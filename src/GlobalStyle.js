@@ -58,7 +58,7 @@ export const GridLogin = styled.div`
   grid-template-columns: 0.8fr 0.8fr 1fr;
   grid-template-rows: 0.5fr 0.7fr 1fr;
   height: 100vh;
-  @media (max-width: 1200px) {
+  @media (max-width: 1290px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.4fr 1fr;
   }
