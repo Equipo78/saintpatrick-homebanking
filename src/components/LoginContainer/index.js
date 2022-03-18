@@ -83,12 +83,12 @@ const LoginContainer = () => {
             label="Ingresá el PINasdas"
           />
         </Form>
-        {/* <ALink to="/"> */}
+        <ALink to="/">
           <ButtonSubmit>
             <TextButton>INICIAR SESIÓN</TextButton>
             <Arrow />
           </ButtonSubmit>
-        {/* </ALink> */}
+        </ALink>
       </Wrapper>
     </>
   );
