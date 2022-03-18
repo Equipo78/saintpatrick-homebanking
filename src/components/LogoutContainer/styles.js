@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Wrapper = styled.div`
   flex: 0.7;
@@ -24,4 +25,10 @@ export const Title = styled.h2`
   @media (max-width: 960px) {
     font-size: 1.7rem;
   }
+`
+
+export const ALink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `

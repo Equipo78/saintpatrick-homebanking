@@ -3,11 +3,11 @@ import styled from 'styled-components'
 export const HistorialGridLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-rows: 1fr;
   grid-template-areas: 'box-1';
-  gap: 3rem;
-  padding: 1rem 3rem 0;
-  min-width: 80%;
+  gap: 0;
+  padding: 2rem 3rem;
+  min-width: 50%;
 `
 
 export const HistorialArea = styled.div`
@@ -29,7 +29,7 @@ export const CardContainer = styled.div`
 `
 
 export const TitleH3 = styled.h3`
-  margin: ${(props) => props.margin};
+  margin: 0;
 `
 
 export const CardImg = styled.img`
@@ -63,6 +63,7 @@ export const PText = styled.p`
 `
 
 export const Ul = styled.ul`
+  width: 100%;
   display: flex;
   flex-direction: ${(props) => props.flexDirection};
   align-items: ${(props) => props.flexAlignItems};

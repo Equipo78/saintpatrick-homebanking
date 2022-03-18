@@ -1,4 +1,5 @@
 import { OutlinedInput, Stepper, TextField } from '@mui/material'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const WrapperTransactions = styled.div`
@@ -136,4 +137,10 @@ export const IconInput = styled.div`
   font-weight: 400;
   font-size: 1.9rem;
   margin-right: 1.2rem;
+`
+
+export const ALink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `

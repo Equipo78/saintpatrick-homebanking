@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { keyframes } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const ConfirmacionGridLayout = styled.div`
   display: grid;
@@ -7,7 +9,7 @@ export const ConfirmacionGridLayout = styled.div`
   grid-template-areas:
     'box-1'
     'box-2';
-  gap: 3rem;
+  gap: 2rem;
   padding: 1rem 3rem 0;
   min-width: 50%;
 `
@@ -56,6 +58,7 @@ export const ContentContainer = styled.div`
   gap: ${(props) => props.gap};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  cursor: ${(props) => props.cursor};
 `
 
 export const PText = styled.p`
@@ -63,6 +66,7 @@ export const PText = styled.p`
   font-weight: ${(props) => props.weight};
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
+  cursor: ${(props) => props.cursor};
 `
 
 export const IconBg = styled.div`
@@ -84,8 +88,28 @@ const IconImg = styled.img`
 export const Icon = styled(IconImg)``
 
 const MainImg = styled.img`
-  height: 50%;
-  width: 50%;
+  position: relative;
 `
 
 export const Img = styled(MainImg)``
+
+export const ALink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`
+
+export const LoaderAnimated = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`
+
+export const LoaderImg = styled.img`
+  position: absolute;
+  animation: ${LoaderAnimated} 1.2s linear infinite;
+`

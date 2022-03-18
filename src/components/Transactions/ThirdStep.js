@@ -9,6 +9,7 @@ import {
   TitleTransaction,
   ContainerButton,
   TextBack,
+  ALink,
 } from './styles'
 
 const ThirdStep = () => {
@@ -37,9 +38,11 @@ const ThirdStep = () => {
       </BoxTransaction>
       <ContainerButton padleft="20rem">
         <TextBack onClick={() => setStep(2)}>Volver</TextBack>
-        <MainButton width="15rem">
-          <TextButton>CONFIRMAR TRANSFERENCIA</TextButton>
-        </MainButton>
+        <ALink to="/confirmacion">
+          <MainButton width="15rem">
+            <TextButton>CONFIRMAR TRANSFERENCIA</TextButton>
+          </MainButton>
+        </ALink>
       </ContainerButton>
     </ContainerTransactions>
   )

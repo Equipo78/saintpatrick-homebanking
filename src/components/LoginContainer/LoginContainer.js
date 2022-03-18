@@ -13,6 +13,7 @@ import {
   LoginTitle,
   UserImg,
   Wrapper,
+  ALink,
 } from './styles'
 
 const LoginContainer = () => {
@@ -70,10 +71,12 @@ const LoginContainer = () => {
         />
       </Form>
 
-      <MainButton width="100%">
-        <TextButton>INICIAR SESION</TextButton>
-        <Arrow />
-      </MainButton>
+      <ALink to="/">
+        <MainButton width="100%">
+          <TextButton>INICIAR SESION</TextButton>
+          <Arrow />
+        </MainButton>
+      </ALink>
     </Wrapper>
   )
 }

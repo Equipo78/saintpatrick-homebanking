@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const TransaccionesGridLayout = styled.div`
   display: grid;
@@ -7,9 +8,9 @@ export const TransaccionesGridLayout = styled.div`
   grid-template-areas:
     'box-1'
     'box-2';
-  gap: 3rem;
-  padding: 1rem 3rem 0;
-  min-width: 50%;
+  gap: 1rem;
+  padding: 1rem 3rem;
+  min-width: 55%;
 `
 
 export const TransaccionesCuenta = styled.div`
@@ -59,6 +60,7 @@ export const ContentContainer = styled.div`
   gap: ${(props) => props.gap};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  cursor: ${(props) => props.cursor};
 `
 
 export const PText = styled.p`
@@ -66,6 +68,7 @@ export const PText = styled.p`
   font-weight: ${(props) => props.weight};
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
+  cursor: ${(props) => props.cursor};
 `
 
 export const Ul = styled.ul`
@@ -96,13 +99,20 @@ export const IconBg = styled.div`
 `
 
 const HomeImg = styled.img`
-  width: 14px;
-  height: 14px;
+  width: auto;
+  height: auto;
 `
 
-export const Icon = styled(HomeImg)``
+export const Icon = styled(HomeImg)`
+  cursor: ${(props) => props.cursor};
+`
 
 export const Line = styled.div`
   border-top: ${(props) => props.border};
   width: 100%;
+`
+export const ALink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `

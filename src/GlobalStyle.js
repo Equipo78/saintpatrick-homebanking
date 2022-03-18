@@ -43,10 +43,13 @@ export const MainLayoutGrid = styled.div`
   grid-template-areas:
     'header header'
     'navbar main';
-  @media (max-width: 990px) {
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 100%;
+    // grid-template-rows: 0.2fr 2.8fr;
     grid-template-areas:
-      'header header'
-      'main main';
+      'header'
+      'main';
   }
 `
 

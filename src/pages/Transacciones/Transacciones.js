@@ -1,24 +1,100 @@
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Plus from 'assets/icons_svg/Plus.svg'
-import StarEmpty from 'assets/icons_svg/StarEmpty.svg'
-import Settings from 'assets/icons_svg/Settings.svg'
-import Contact from 'assets/icons_svg/Contact.svg'
+import DownArrow from 'assets/icons_svg/DownArrow.svg'
+import Favoritas from 'components/Contactos/Favoritas'
+import Ultimas from 'components/Contactos/Favoritas'
 
 import {
   TransaccionesGridLayout,
   TransaccionesCuenta,
   TransaccionesUltimas,
   CardContainer,
+  CardWrapper,
   TitleH3,
   ContentContainer,
   PText,
   IconBg,
-  Ul,
-  Li,
   Icon,
   Line,
 } from './styles'
 
+const userData = [
+  {
+    id: 1,
+    date: '14-05-22',
+    name: 'Sofia Gomez',
+    bank: 'Banco Galicia',
+    fav: true,
+  },
+  {
+    id: 2,
+    date: '14-05-21',
+    name: 'Agustin Baez',
+    bank: 'BBVA Frances',
+    fav: false,
+  },
+  {
+    id: 3,
+    date: '14-05-20',
+    name: 'Eva Matheo',
+    bank: 'Mercado Pago',
+    fav: true,
+  },
+  {
+    id: 4,
+    date: '14-05-19',
+    name: 'Cynthia Perez',
+    bank: 'Santander',
+    fav: true,
+  },
+  {
+    id: 5,
+    date: '14-05-18',
+    name: 'Jimena Suarez',
+    bank: 'Banco Galicia',
+    fav: false,
+  },
+]
+
+const favList = []
+
 const Transacciones = () => {
+  const [data, setData] = useState(userData)
+  const [addFavourite, setAddFavourite] = useState(favList)
+  const [contacts, setContacts] = useState(true)
+  const [favorites, setFavorites] = useState(false)
+
+  useEffect(() => {
+    data.map((item) => {
+      if (item.fav) {
+        setAddFavourite((oldArray) => [...oldArray, item])
+      }
+
+      return data
+    })
+  }, [])
+
+  const handleContacts = (e) => {
+    e.preventDefault()
+    setContacts((contacts) => !contacts)
+
+    // Change font
+    // Change weight
+  }
+
+  const handleFavorites = (e) => {
+    e.preventDefault()
+    setFavorites((favorites) => !favorites)
+    console.log(favorites)
+
+    //update data and addFavourite
+    // setData((prevData) => {
+    //   return { ...prevData, fav: favorites };
+    // });
+    // console.log(data)
+  }
+
   return (
     <TransaccionesGridLayout>
       <TransaccionesCuenta>
@@ -26,9 +102,11 @@ const Transacciones = () => {
           <TitleH3 margin="1.5rem 2rem">Elegi a que cuenta transferir</TitleH3>
           <Line border="1px solid rgba(0, 0, 0, 0.1)" />
           <ContentContainer flexAlignItems="center" margin="1rem 2rem">
-            <IconBg backgroundColor="rgba(0,87,88, 0.1)">
-              <Icon src={Plus} />
-            </IconBg>
+            <Link to="/transactions">
+              <IconBg backgroundColor="rgba(0,87,88, 0.1)">
+                <Icon cursor="pointer" src={Plus} />
+              </IconBg>
+            </Link>
             <PText color="rgba(0,87,88, 1)" margin="0 1rem">
               Agregar Cuenta
             </PText>
@@ -37,155 +115,51 @@ const Transacciones = () => {
       </TransaccionesCuenta>
       <TransaccionesUltimas>
         <CardContainer>
-          <ContentContainer flexJustify="space-evenly">
-            <ContentContainer flexAlignItems="center" flexDirection="column" width="100%">
-              <PText color="rgba(0, 87, 88, 1)" weight="600">
-                Ultimas
+          <CardWrapper>
+            <ContentContainer flexJustify="space-evenly">
+              <ContentContainer
+                cursor="pointer"
+                flexAlignItems="center"
+                flexDirection="column"
+                width="100%"
+                onClick={handleContacts}
+              >
+                <PText color="rgba(0, 87, 88, 1)" margin="1rem 0" weight="600">
+                  Ultimas
+                </PText>
+                <Line
+                  border={
+                    contacts ? '3px solid rgba(0, 87, 88, 1)' : '1px solid rgba(0, 0, 0, 0.1)'
+                  }
+                />
+              </ContentContainer>
+              <ContentContainer
+                cursor="pointer"
+                flexAlignItems="center"
+                flexDirection="column"
+                width="100%"
+                onClick={handleContacts}
+              >
+                <PText margin="1rem 0">Favoritas</PText>
+                <Line
+                  border={
+                    contacts ? '1px solid rgba(0, 0, 0, 0.1)' : '3px solid rgba(0, 87, 88, 1)'
+                  }
+                />
+              </ContentContainer>
+            </ContentContainer>
+            {contacts ? (
+              <Ultimas data={data} handleFav={handleFavorites} />
+            ) : (
+              <Favoritas data={addFavourite} handleFav={handleFavorites} />
+            )}
+            <ContentContainer flexJustify="flex-end" gap="0 0.5rem" margin="1rem 3.5rem">
+              <PText color="#005758" cursor="pointer">
+                Ver mas
               </PText>
-              <Line border="3px solid rgba(0, 87, 88, 1)" />
+              <Icon cursor="pointer" src={DownArrow} />
             </ContentContainer>
-            <ContentContainer flexAlignItems="center" flexDirection="column" width="100%">
-              <PText>Favoritas</PText>
-              <Line border="1px solid rgba(0, 0, 0, 0.1)" />
-            </ContentContainer>
-          </ContentContainer>
-          <Ul flexDirection="column" padding="1rem 2rem">
-            <Li>
-              <ContentContainer
-                flexAlignItems="center"
-                flexJustify="space-between"
-                margin="1rem"
-                width="100%"
-              >
-                <ContentContainer flexAlignItems="center">
-                  <IconBg backgroundColor="rgba(247, 197, 72, 1)">
-                    <Icon src={Contact} />
-                  </IconBg>
-                  <ContentContainer flexAlignItems="flex-start" flexDirection="column">
-                    <PText margin="0 1rem">Sofia Gomez</PText>
-                    <PText margin="0 1rem">Banco Galicia</PText>
-                  </ContentContainer>
-                </ContentContainer>
-                <ContentContainer>
-                  <Icon src={StarEmpty} />
-                  <Icon src={Settings} />
-                </ContentContainer>
-              </ContentContainer>
-            </Li>
-            <Li>
-              <ContentContainer
-                flexAlignItems="center"
-                flexJustify="space-between"
-                margin="1rem"
-                width="100%"
-              >
-                <ContentContainer flexAlignItems="center">
-                  <IconBg backgroundColor="rgba(247, 197, 72, 1)">
-                    <Icon src={Contact} />
-                  </IconBg>
-                  <ContentContainer flexAlignItems="flex-start" flexDirection="column">
-                    <PText margin="0 1rem">Agustin Baez</PText>
-                    <PText margin="0 1rem">BBVA Frances</PText>
-                  </ContentContainer>
-                </ContentContainer>
-                <ContentContainer>
-                  <Icon src={StarEmpty} />
-                  <Icon src={Settings} />
-                </ContentContainer>
-              </ContentContainer>
-            </Li>
-            <Li>
-              <ContentContainer
-                flexAlignItems="center"
-                flexJustify="space-between"
-                margin="1rem"
-                width="100%"
-              >
-                <ContentContainer flexAlignItems="center">
-                  <IconBg backgroundColor="rgba(247, 197, 72, 1)">
-                    <Icon src={Contact} />
-                  </IconBg>
-                  <ContentContainer flexAlignItems="flex-start" flexDirection="column">
-                    <PText margin="0 1rem">Eva Matheo</PText>
-                    <PText margin="0 1rem">Mercado Pago</PText>
-                  </ContentContainer>
-                </ContentContainer>
-                <ContentContainer>
-                  <Icon src={StarEmpty} />
-                  <Icon src={Settings} />
-                </ContentContainer>
-              </ContentContainer>
-            </Li>
-            <Li>
-              <ContentContainer
-                flexAlignItems="center"
-                flexJustify="space-between"
-                margin="1rem"
-                width="100%"
-              >
-                <ContentContainer flexAlignItems="center">
-                  <IconBg backgroundColor="rgba(247, 197, 72, 1)">
-                    <Icon src={Contact} />
-                  </IconBg>
-                  <ContentContainer flexAlignItems="flex-start" flexDirection="column">
-                    <PText margin="0 1rem">Cynthia Perez</PText>
-                    <PText margin="0 1rem">Santander</PText>
-                  </ContentContainer>
-                </ContentContainer>
-                <ContentContainer>
-                  <Icon src={StarEmpty} />
-                  <Icon src={Settings} />
-                </ContentContainer>
-              </ContentContainer>
-            </Li>
-            <Li>
-              <ContentContainer
-                flexAlignItems="center"
-                flexJustify="space-between"
-                margin="1rem"
-                width="100%"
-              >
-                <ContentContainer flexAlignItems="center">
-                  <IconBg backgroundColor="rgba(247, 197, 72, 1)">
-                    <Icon src={Contact} />
-                  </IconBg>
-                  <ContentContainer flexAlignItems="flex-start" flexDirection="column">
-                    <PText margin="0 1rem">Jimena Suarez</PText>
-                    <PText margin="0 1rem">Banco Galicia</PText>
-                  </ContentContainer>
-                </ContentContainer>
-                <ContentContainer>
-                  <Icon src={StarEmpty} />
-                  <Icon src={Settings} />
-                </ContentContainer>
-              </ContentContainer>
-            </Li>
-            <Li>
-              <ContentContainer
-                flexAlignItems="center"
-                flexJustify="space-between"
-                margin="1rem"
-                width="100%"
-              >
-                <ContentContainer flexAlignItems="center">
-                  <IconBg backgroundColor="rgba(247, 197, 72, 1)">
-                    <Icon src={Contact} />
-                  </IconBg>
-                  <ContentContainer flexAlignItems="flex-start" flexDirection="column">
-                    <PText margin="0 1rem">Juan Sosa</PText>
-                    <PText margin="0 1rem">BBVA Frances</PText>
-                  </ContentContainer>
-                </ContentContainer>
-                <ContentContainer>
-                  <Icon src={StarEmpty} />
-                  <Icon src={Settings} />
-                </ContentContainer>
-              </ContentContainer>
-            </Li>
-          </Ul>
-          <ContentContainer flexJustify="flex-end" margin="0 2rem">
-            <PText color="rgba(0, 87, 88, 1)">Ver mas</PText>
-          </ContentContainer>
+          </CardWrapper>
         </CardContainer>
       </TransaccionesUltimas>
     </TransaccionesGridLayout>
