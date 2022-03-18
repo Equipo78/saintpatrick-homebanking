@@ -1,4 +1,14 @@
-import React from "react";
+import Home from 'assets/icons_svg/Icon/Home.svg'
+import Saldos from 'assets/icons_svg/Icon/Saldos.svg'
+import Movimientos from 'assets/icons_svg/Icon/Movimientos.svg'
+import Transferencia from 'assets/icons_svg/Icon/Transferencia.svg'
+import Tarjetas from 'assets/icons_svg/Icon/Tarjetas.svg'
+import Comprobantes from 'assets/icons_svg/Icon/Comprobantes.svg'
+import Perfil from 'assets/icons_svg/Icon/Perfil.svg'
+import Ayuda from 'assets/icons_svg/Icon/Ayuda.svg'
+import Salir from 'assets/icons_svg/Icon/Salir.svg'
+import useMediaQuery from 'hooks/useMediaQuery'
+
 import {
   NavBarContainer,
   NavBarUl,
@@ -7,20 +17,14 @@ import {
   ALink,
   SpaceBreak,
   PText,
-} from "./styles";
-import Home from "../../assets/icons_svg/Icon/Home.svg";
-import Saldos from "../../assets/icons_svg/Icon/Saldos.svg";
-import Movimientos from "../../assets/icons_svg/Icon/Movimientos.svg";
-import Transferencia from "../../assets/icons_svg/Icon/Transferencia.svg";
-import Tarjetas from "../../assets/icons_svg/Icon/Tarjetas.svg";
-import Comprobantes from "../../assets/icons_svg/Icon/Comprobantes.svg";
-import Perfil from "../../assets/icons_svg/Icon/Perfil.svg";
-import Ayuda from "../../assets/icons_svg/Icon/Ayuda.svg";
-import Salir from "../../assets/icons_svg/Icon/Salir.svg";
+  ContentContainer,
+} from './styles'
 
 const NavBar = () => {
+  const isDesktop = useMediaQuery('(min-width: 990px)')
+
   return (
-    <NavBarContainer>
+    <NavBarContainer display={isDesktop ? 'flex' : 'none'}>
       <NavBarUl>
         <NavBarLi>
           <ALink to="/">
@@ -78,19 +82,21 @@ const NavBar = () => {
           </ALink>
         </NavBarLi>
         <SpaceBreak />
-        <NavBarLi>
-          <ALink to="/privacidad">
-            <PText size="10px">Politicas de privacidad</PText>
-          </ALink>
-        </NavBarLi>
-        <NavBarLi>
-          <ALink to="/terminos">
-            <PText size="10px">Terminos y condiciones</PText>
-          </ALink>
-        </NavBarLi>
+        <ContentContainer flexJustify="center" gap="0 0.5rem">
+          <NavBarLi>
+            <ALink to="/privacidad">
+              <PText size="9px">Privacidad</PText>
+            </ALink>
+          </NavBarLi>
+          <NavBarLi>
+            <ALink to="/terminos">
+              <PText size="9px">Terminos & Condiciones</PText>
+            </ALink>
+          </NavBarLi>
+        </ContentContainer>
       </NavBarUl>
     </NavBarContainer>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

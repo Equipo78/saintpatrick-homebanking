@@ -1,8 +1,13 @@
-import React from "react";
-import { HeaderContainer } from "./styles";
+import logo from 'assets/logo.png'
 
-const Header = () => {
-  return <HeaderContainer></HeaderContainer>;
-};
+import { HeaderStyled, Logo } from './styles'
 
-export default Header;
+const Header = ({ height }) => {
+  return (
+    <HeaderStyled height={height}>
+      <Logo alt="logo" src={logo} />
+    </HeaderStyled>
+  )
+}
+
+export default Header

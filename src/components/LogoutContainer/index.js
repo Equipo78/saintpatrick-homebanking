@@ -1,4 +1,3 @@
-//  styles
 import { Title, Wrapper, ALink } from "./styles";
 import { MainButton, TextButton, Arrow } from "../Buttons/styles";
 

@@ -1,5 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Plus from 'assets/icons_svg/Plus.svg'
+import DownArrow from 'assets/icons_svg/DownArrow.svg'
+import Favoritas from 'components/Contactos/Favoritas'
+import Ultimas from 'components/Contactos/Favoritas'
 
 import {
   TransaccionesGridLayout,
@@ -13,82 +17,76 @@ import {
   IconBg,
   Icon,
   Line,
-} from "./styles";
-
-import Plus from "../../assets/icons_svg/Plus.svg";
-import DownArrow from "../../assets/icons_svg/DownArrow.svg";
-import Favoritas from "components/Contactos/Favoritas";
-import Ultimas from "components/Contactos/Favoritas";
+} from './styles'
 
 const userData = [
   {
     id: 1,
-    date: "14-05-22",
-    name: "Sofia Gomez",
-    bank: "Banco Galicia",
+    date: '14-05-22',
+    name: 'Sofia Gomez',
+    bank: 'Banco Galicia',
     fav: true,
   },
   {
     id: 2,
-    date: "14-05-21",
-    name: "Agustin Baez",
-    bank: "BBVA Frances",
+    date: '14-05-21',
+    name: 'Agustin Baez',
+    bank: 'BBVA Frances',
     fav: false,
   },
   {
     id: 3,
-    date: "14-05-20",
-    name: "Eva Matheo",
-    bank: "Mercado Pago",
+    date: '14-05-20',
+    name: 'Eva Matheo',
+    bank: 'Mercado Pago',
     fav: true,
   },
   {
     id: 4,
-    date: "14-05-19",
-    name: "Cynthia Perez",
-    bank: "Santander",
+    date: '14-05-19',
+    name: 'Cynthia Perez',
+    bank: 'Santander',
     fav: true,
   },
   {
     id: 5,
-    date: "14-05-18",
-    name: "Jimena Suarez",
-    bank: "Banco Galicia",
+    date: '14-05-18',
+    name: 'Jimena Suarez',
+    bank: 'Banco Galicia',
     fav: false,
   },
-];
+]
 
-const favList =[];
+const favList = []
 
 const Transacciones = () => {
-
   const [data, setData] = useState(userData)
-  const [addFavourite, setAddFavourite] = useState(favList);
-  const [contacts, setContacts] = useState(true);
-  const [favorites, setFavorites] = useState(false);
-
+  const [addFavourite, setAddFavourite] = useState(favList)
+  const [contacts, setContacts] = useState(true)
+  const [favorites, setFavorites] = useState(false)
 
   useEffect(() => {
     data.map((item) => {
       if (item.fav) {
-        setAddFavourite(oldArray => [...oldArray, item]);
+        setAddFavourite((oldArray) => [...oldArray, item])
       }
-      return data;
+
+      return data
     })
   }, [])
-  
+
   const handleContacts = (e) => {
-    e.preventDefault();
-	  setContacts(contacts => !contacts);
+    e.preventDefault()
+    setContacts((contacts) => !contacts)
 
     // Change font
     // Change weight
   }
 
   const handleFavorites = (e) => {
-    e.preventDefault();
-    setFavorites(favorites => !favorites);
-    console.log(favorites);
+    e.preventDefault()
+    setFavorites((favorites) => !favorites)
+    console.log(favorites)
 
     //update data and addFavourite
     // setData((prevData) => {
@@ -106,10 +104,10 @@ const Transacciones = () => {
           <ContentContainer flexAlignItems="center" margin="1rem 2rem">
             <Link to="/transactions">
               <IconBg backgroundColor="rgba(0,87,88, 0.1)">
-                <Icon src={Plus} cursor="pointer"/>
+                <Icon cursor="pointer" src={Plus} />
               </IconBg>
             </Link>
-            <PText margin="0 1rem" color="rgba(0,87,88, 1)">
+            <PText color="rgba(0,87,88, 1)" margin="0 1rem">
               Agregar Cuenta
             </PText>
           </ContentContainer>
@@ -118,40 +116,54 @@ const Transacciones = () => {
       <TransaccionesUltimas>
         <CardContainer>
           <CardWrapper>
-              <ContentContainer flexJustify="space-evenly">
-                <ContentContainer
-                  flexDirection="column"
-                  flexAlignItems="center"
-                  width="100%"
-                  cursor="pointer"
-                  onClick={handleContacts}
-                >
-                  <PText weight="600" color="rgba(0, 87, 88, 1)" margin="1rem 0">
-                    Ultimas
-                  </PText>
-                  <Line border={contacts ? "3px solid rgba(0, 87, 88, 1)" : "1px solid rgba(0, 0, 0, 0.1)"} />
-                </ContentContainer>
-                <ContentContainer
-                  flexDirection="column"
-                  flexAlignItems="center"
-                  width="100%"
-                  cursor="pointer"
-                  onClick={handleContacts}
-                >
-                  <PText margin="1rem 0">Favoritas</PText>
-                  <Line border={contacts ? "1px solid rgba(0, 0, 0, 0.1)" : "3px solid rgba(0, 87, 88, 1)"} />
-                </ContentContainer>
+            <ContentContainer flexJustify="space-evenly">
+              <ContentContainer
+                cursor="pointer"
+                flexAlignItems="center"
+                flexDirection="column"
+                width="100%"
+                onClick={handleContacts}
+              >
+                <PText color="rgba(0, 87, 88, 1)" margin="1rem 0" weight="600">
+                  Ultimas
+                </PText>
+                <Line
+                  border={
+                    contacts ? '3px solid rgba(0, 87, 88, 1)' : '1px solid rgba(0, 0, 0, 0.1)'
+                  }
+                />
               </ContentContainer>
-            {contacts ? <Ultimas data={data} handleFav={handleFavorites}/> : <Favoritas data={addFavourite} handleFav={handleFavorites}/>}
+              <ContentContainer
+                cursor="pointer"
+                flexAlignItems="center"
+                flexDirection="column"
+                width="100%"
+                onClick={handleContacts}
+              >
+                <PText margin="1rem 0">Favoritas</PText>
+                <Line
+                  border={
+                    contacts ? '1px solid rgba(0, 0, 0, 0.1)' : '3px solid rgba(0, 87, 88, 1)'
+                  }
+                />
+              </ContentContainer>
+            </ContentContainer>
+            {contacts ? (
+              <Ultimas data={data} handleFav={handleFavorites} />
+            ) : (
+              <Favoritas data={addFavourite} handleFav={handleFavorites} />
+            )}
             <ContentContainer flexJustify="flex-end" gap="0 0.5rem" margin="1rem 3.5rem">
-              <PText color="#005758" cursor="pointer">Ver mas</PText>
-              <Icon src={DownArrow} cursor="pointer"/>
+              <PText color="#005758" cursor="pointer">
+                Ver mas
+              </PText>
+              <Icon cursor="pointer" src={DownArrow} />
             </ContentContainer>
           </CardWrapper>
         </CardContainer>
       </TransaccionesUltimas>
     </TransaccionesGridLayout>
-  );
-};
+  )
+}
 
-export default Transacciones;
+export default Transacciones

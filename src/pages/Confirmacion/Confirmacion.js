@@ -1,5 +1,6 @@
-import React, { useState, Suspense, lazy } from "react";
-import ConfirmacionLoading from "components/Confirmacion/ConfirmacionLoading";
+import { Suspense, lazy } from 'react'
+import ConfirmacionLoading from 'components/Confirmacion/ConfirmacionLoading'
+
 import {
   ConfirmacionGridLayout,
   ConfirmacionCard,
@@ -8,16 +9,15 @@ import {
   ContentContainer,
   PText,
   ALink,
-} from "./styles";
+} from './styles'
 
 const ConfirmacionSuccess = lazy(() => {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(import("../../components/Confirmacion/ConfirmacionSuccess")), 1200);
-  });
-});
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import('../../components/Confirmacion/ConfirmacionSuccess')), 1200)
+  })
+})
 
 const Confirmacion = () => {
-
   return (
     <ConfirmacionGridLayout>
       <ConfirmacionCard>
@@ -26,13 +26,13 @@ const Confirmacion = () => {
         </Suspense>
       </ConfirmacionCard>
       <ConfirmacionBtns>
-        <ContentContainer flexJustify="flex-end" gap="1rem" flexAlignItems="center">
+        <ContentContainer flexAlignItems="center" flexJustify="flex-end" gap="1rem">
           <ALink to="/">
-            <PText weight="600" color="#005758" cursor="pointer">
+            <PText color="#005758" cursor="pointer" weight="600">
               Volver al Inicio
             </PText>
           </ALink>
-          <ContentContainer flexAlignItems="center" flexJustify="center" cursor="pointer">
+          <ContentContainer cursor="pointer" flexAlignItems="center" flexJustify="center">
             <CardContainer backgroundColor="#005758">
               <PText color="#fff" margin="1rem">
                 VER COMPROBANTE
@@ -42,7 +42,7 @@ const Confirmacion = () => {
         </ContentContainer>
       </ConfirmacionBtns>
     </ConfirmacionGridLayout>
-  );
-};
+  )
+}
 
-export default Confirmacion;
+export default Confirmacion

@@ -1,97 +1,84 @@
+import { useState } from 'react'
+import { VisibilityOffOutlined, VisibilityOutlined } from '@mui/icons-material'
+
+import { MainButton, TextButton, Arrow } from '../Buttons/styles'
+
 import {
-  Wrapper,
-  Input,
-  Form,
   Label,
   Adornament,
-  Button,
-  Lock,
-  CreditCard,
-  Title,
-  ButtonSubmit,
-  TextButton,
-  Arrow,
+  Eye,
+  Form,
+  Input,
+  LockImg,
   LoginTitle,
+  UserImg,
+  Wrapper,
   ALink,
-} from "./styles";
-import { useState } from "react";
-import { VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
+} from './styles'
 
 const LoginContainer = () => {
   const [values, setValues] = useState({
-    password: "",
+    password: '',
     showPassword: false,
-  });
+  })
 
   const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
+    setValues({ ...values, [prop]: event.target.value })
+  }
 
   const handleClickShowPassword = () => {
     setValues({
       ...values,
       showPassword: !values.showPassword,
-    });
-  };
+    })
+  }
 
   const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   return (
-    <>
-      <Title>¡Hola! Te damos la bienvenida a nuestro Home Banking</Title>
+    <Wrapper>
+      <LoginTitle>Ingresá tus datos para comenzar</LoginTitle>
 
-      <Wrapper>
-        <LoginTitle>Ingresá tus datos para comenzar</LoginTitle>
+      <Form variant="outlined">
+        <UserImg />
+        <Label htmlFor="outlined-adornment-password">Usuario</Label>
+        <Input id="outlined-adornment-password" label="Usuarioooooooo" type="text" />
+      </Form>
 
-        <Form variant="outlined">
-          <CreditCard />
-          <Label htmlFor="outlined-adornment-password">      Ingresá el número de tarjeta
-          </Label>
-          <Input
-            id="outlined-adornment-password"
-            type="text"
-            label="Ingresá el número de tarjetaasdas"
-          />
-        </Form>
+      <Form variant="outlined">
+        <LockImg />
+        <Label htmlFor="outlined-adornment-password"> Clave</Label>
+        <Input
+          endAdornment={
+            <Adornament position="end">
+              <Eye
+                aria-label="toggle password visibility"
+                edge="end"
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+              >
+                {values.showPassword ? <VisibilityOffOutlined /> : <VisibilityOutlined />}
+              </Eye>
+            </Adornament>
+          }
+          id="outlined-adornment-password"
+          label="Claveeeeeeee"
+          type={values.showPassword ? 'text' : 'password'}
+          value={values.password}
+          onChange={handleChange('password')}
+        />
+      </Form>
+      
+      <ALink to="/">
+        <MainButton width="100%">
+          <TextButton>INICIAR SESION</TextButton>
+          <Arrow />
+        </MainButton>
+      </ALink>
+    </Wrapper>
+  )
+}
 
-        <Form variant="outlined">
-          <Lock />
-          <Label htmlFor="outlined-adornment-password">      Ingresá el PIN</Label>
-          <Input
-            id="outlined-adornment-password"
-            type={values.showPassword ? "text" : "password"}
-            value={values.password}
-            onChange={handleChange("password")}
-            endAdornment={
-              <Adornament position="end">
-                <Button
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {values.showPassword ? (
-                    <VisibilityOffOutlined />
-                  ) : (
-                    <VisibilityOutlined />
-                  )}
-                </Button>
-              </Adornament>
-            }
-            label="Ingresá el PINasdas"
-          />
-        </Form>
-        <ALink to="/">
-          <ButtonSubmit>
-            <TextButton>INICIAR SESIÓN</TextButton>
-            <Arrow />
-          </ButtonSubmit>
-        </ALink>
-      </Wrapper>
-    </>
-  );
-};
-
-export default LoginContainer;
+export default LoginContainer

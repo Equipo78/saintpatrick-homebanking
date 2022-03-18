@@ -1,9 +1,20 @@
-import { Background, BackgroundImgCenter, BackgroundImgLeft } from "./styles";
-const BackgroundLogin = () => {
-  return <Background>
-    <BackgroundImgLeft />
-    <BackgroundImgCenter />
-  </Background>
-};
+//  styles
+import { WrapperBackground } from 'GlobalStyle'
+import background from 'assets/background-login/background.png'
 
-export default BackgroundLogin;
+import { BackgroundImgCenter, BackgroundImgLeft, Title } from './styles'
+
+//  images
+
+const BackgroundLogin = () => {
+  return (
+    <>
+      <WrapperBackground background={background} position="right" />
+      <Title>¡Hola! Te damos la bienvenida a nuestro Home Banking</Title>
+      <BackgroundImgLeft />
+      <BackgroundImgCenter />
+    </>
+  )
+}
+
+export default BackgroundLogin

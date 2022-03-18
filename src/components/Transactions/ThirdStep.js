@@ -1,18 +1,19 @@
-//  styles
+import { useContext } from 'react'
+import TransactionsContext from 'context/TransactionsContext'
+
+import { MainButton, TextButton } from '../Buttons/styles'
+
 import {
   BoxTransaction,
   ContainerTransactions,
   TitleTransaction,
   ContainerButton,
   TextBack,
-  ALink
-} from "./styles";
-import { MainButton, TextButton } from "../Buttons/styles";
-import { useContext } from "react";
-import TransactionsContext from "context/TransactionsContext";
+  ALink,
+} from './styles'
 
 const ThirdStep = () => {
-  const { setStep } = useContext(TransactionsContext);
+  const { setStep } = useContext(TransactionsContext)
 
   return (
     <ContainerTransactions>
