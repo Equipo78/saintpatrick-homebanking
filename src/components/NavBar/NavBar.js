@@ -23,9 +23,10 @@ import {
 
 const NavBar = () => {
   const isDesktop = useMediaQuery('(min-width: 1024px)')
+  //display={isDesktop ? 'flex' : 'none'}
 
   return (
-    <NavBarContainer display={isDesktop ? 'flex' : 'none'}>
+    <NavBarContainer>
       <Close fontSize="large" />
       <NavBarUl>
         <NavBarLi>
