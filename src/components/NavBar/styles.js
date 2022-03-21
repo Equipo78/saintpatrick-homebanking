@@ -20,7 +20,7 @@ export const NavBarContainer = styled.nav`
     display: fixed;
     overflow: hidden;
     overflow-y: hidden;
-    display: flex;
+    // display: flex;
     align-items: center;
     background-color: #005758;
     color: #fff;
