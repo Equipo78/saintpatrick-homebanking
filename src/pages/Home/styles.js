@@ -16,13 +16,6 @@ export const HomeGridLayout = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    // grid-template-columns: 100%;
-    // grid-template-rows: 0.2fr 0.2fr 0.6fr 1fr;
-    // grid-template-areas:
-    //   'top'
-    //   'box-1'
-    //   'box-3'
-    //   'box-2';
     gap: 2rem;
     padding: 3rem 1rem;
   }
