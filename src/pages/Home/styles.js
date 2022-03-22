@@ -14,14 +14,15 @@ export const HomeGridLayout = styled.div`
   width: 100%;
   @media (max-width: 600px) {
     width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: 100%;
     // grid-template-rows: 0.2fr 0.2fr 0.6fr 1fr;
-    grid-template-areas:
-      'top'
-      'box-1'
-      'box-3'
-      'box-2';
+    // grid-template-areas:
+    //   'top'
+    //   'box-1'
+    //   'box-3'
+    //   'box-2';
     gap: 2rem;
     padding: 3rem 1rem;
   }
@@ -69,6 +70,9 @@ export const CardTopDecor = styled(CardImg)``
 
 export const CardWrapper = styled.div`
   margin: ${(props) => props.margin};
+  @media (max-width: 600px) {
+    margin: 2rem 1rem;
+  }
 `
 
 export const ContentContainer = styled.div`
@@ -79,6 +83,11 @@ export const ContentContainer = styled.div`
   justify-content: ${(props) => props.flexJustify};
   gap: ${(props) => props.gap};
   margin: ${(props) => props.margin};
+  @media (max-width: 600px) {
+    width: 100%;
+    font-size: 12px;
+    gap: 1rem;
+  }
 `
 
 export const PText = styled.p`
@@ -99,6 +108,11 @@ export const Ul = styled.ul`
   margin: 0;
   padding: ${(props) => props.padding};
   text-align: center;
+  @media (max-width: 600px) {
+    font-size: 12px;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
 `
 
 export const Li = styled.li`
@@ -106,6 +120,9 @@ export const Li = styled.li`
   align-items: center;
   gap: 1rem;
   cursor: ${(props) => props.cursor};
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 export const IconBg = styled.div`
@@ -116,6 +133,10 @@ export const IconBg = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  @media (max-width: 600px) {
+    width: 35px;
+    height: 35px;
+  }
 `
 
 const HomeImg = styled.img`
@@ -130,5 +151,7 @@ export const Icon = styled(HomeImg)`
 export const ALink = styled(Link)`
   display: flex;
   align-items: center;
+  color: inherit;
+  text-decoration: none;
   gap: 1rem;
 `

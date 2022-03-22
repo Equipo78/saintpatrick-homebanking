@@ -143,4 +143,5 @@ export const ALink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-decoration: none;
 `

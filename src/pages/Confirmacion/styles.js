@@ -12,6 +12,13 @@ export const ConfirmacionGridLayout = styled.div`
   gap: 2rem;
   padding: 1rem 3rem 0;
   min-width: 50%;
+  @media (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1rem;
+  }
 `
 
 export const ConfirmacionCard = styled.div`
@@ -97,6 +104,7 @@ export const ALink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-decoration: none;
 `
 
 export const LoaderAnimated = keyframes`

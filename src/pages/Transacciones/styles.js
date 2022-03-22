@@ -11,6 +11,13 @@ export const TransaccionesGridLayout = styled.div`
   gap: 1rem;
   padding: 1rem 3rem;
   min-width: 55%;
+  @media (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1rem;
+  }
 `
 
 export const TransaccionesCuenta = styled.div`
@@ -71,23 +78,6 @@ export const PText = styled.p`
   cursor: ${(props) => props.cursor};
 `
 
-export const Ul = styled.ul`
-  display: flex;
-  flex-direction: ${(props) => props.flexDirection};
-  align-items: ${(props) => props.flexAlignItems};
-  list-style-type: none;
-  gap: ${(props) => props.gap};
-  margin: 0;
-  padding: ${(props) => props.padding};
-  text-align: center;
-`
-
-export const Li = styled.li`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`
-
 export const IconBg = styled.div`
   width: 41px;
   height: 41px;
@@ -96,6 +86,10 @@ export const IconBg = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  @media (max-width: 600px) {
+    width: 35px;
+    height: 35px;
+  }
 `
 
 const HomeImg = styled.img`

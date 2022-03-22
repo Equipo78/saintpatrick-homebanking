@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import CloseIcon from '@mui/icons-material/Close'
 
 export const NavBarContainer = styled.nav`
   grid-area: navbar;
@@ -14,9 +15,9 @@ export const NavBarContainer = styled.nav`
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
   width: 100%;
-  @media (max-width: 600px) {
+  @media (max-width: 1000px) {
     display: ${(props) => props.display};
-    align-items: center;
+    flex-direction: column;
     // position: absolute;
     // top: 0;
     // left: 0;
@@ -24,11 +25,13 @@ export const NavBarContainer = styled.nav`
     overflow: hidden;
     overflow-y: hidden;
     background-color: #005758;
+    align-items: center;
     color: #fff;
     width: 100%;
-    // z-index: 9999;
-    font-size: 1rem;
     height: 100%;
+    z-index: 9999;
+    font-size: 1rem;
+    visibility: ${(props) => props.visibility};
   }
 `
 

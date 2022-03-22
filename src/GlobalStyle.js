@@ -44,12 +44,13 @@ export const MainLayoutGrid = styled.div`
     'header header'
     'navbar main';
   @media (max-width: 600px) {
-    display: grid;
-    grid-template-columns: 100%;
-    // grid-template-rows: 0.2fr 2.8fr;
-    grid-template-areas:
-      'header'
-      'main';
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: 100%;
+    // grid-template-rows: 0.2fr 0.8fr;
+    // grid-template-areas:
+    //   'header'
+    //   'main';
   }
 `
 

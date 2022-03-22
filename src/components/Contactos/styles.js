@@ -1,17 +1,5 @@
 import styled from 'styled-components'
 
-export const TransaccionesGridLayout = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.8fr;
-  grid-template-areas:
-    'box-1'
-    'box-2';
-  gap: 1rem;
-  padding: 1rem 3rem;
-  min-width: 55%;
-`
-
 export const TransaccionesCuenta = styled.div`
   grid-area: box-1;
 `
@@ -60,6 +48,11 @@ export const ContentContainer = styled.div`
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   cursor: ${(props) => props.cursor};
+  @media (max-width: 600px) {
+    // width: 100%;
+    font-size: 12px;
+    gap: 0;
+  }
 `
 
 export const PText = styled.p`
@@ -68,6 +61,11 @@ export const PText = styled.p`
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
   cursor: ${(props) => props.cursor};
+  @media (max-width: 600px) {
+    padding: 0.3rem 0;
+    width: 100%;
+    text-aling: left;
+  }
 `
 
 export const Ul = styled.ul`
@@ -79,6 +77,10 @@ export const Ul = styled.ul`
   margin: 0;
   padding: ${(props) => props.padding};
   text-align: center;
+  @media (max-width: 600px) {
+    padding: 1rem;
+    width: 100%;
+  }
 `
 
 export const Li = styled.li`
@@ -95,6 +97,11 @@ export const IconBg = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  @media (max-width: 600px) {
+    padding: 1rem;
+    width: 34px;
+    height: 34px;
+  }
 `
 
 const HomeImg = styled.img`
