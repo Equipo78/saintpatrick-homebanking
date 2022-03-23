@@ -1,11 +1,8 @@
 import logo from 'assets/logo.png'
-import { useState } from 'react'
 
 import { HeaderStyled, Logo, MenuContainer, Menu, Close } from './styles'
 
-const Header = ({ height }) => {
-  const [navToggle, setNavToggle] = useState(false)
-
+const Header = ({ height, navToggle, setNavToggle }) => {
   const toggleHandler = () => {
     return setNavToggle((navToggle) => !navToggle)
   }

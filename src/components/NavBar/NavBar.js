@@ -22,7 +22,7 @@ import {
 
 const NavBar = ({ navToggle }) => {
   const isDesktop = useMediaQuery('(min-width: 1024px)')
-  const handleMobileNav = () => (navToggle ? 'flex' : 'none')
+  const handleMobileNav = () => (navToggle ? 'fixed' : 'none')
 
   return (
     <NavBarContainer display={isDesktop ? 'flex' : handleMobileNav()}>

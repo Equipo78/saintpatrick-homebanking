@@ -17,18 +17,17 @@ export const NavBarContainer = styled.nav`
   @media (max-width: 600px) {
     display: ${(props) => props.display};
     align-items: center;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    padding: 2rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem 2rem 4rem;
     overflow: hidden;
     overflow-y: hidden;
     background-color: #005758;
     color: #fff;
     width: 100%;
-    // z-index: 9999;
-    font-size: 1rem;
-    height: 100%;
+    z-index: 9000;
+    height: 100vh;
   }
 `
 
@@ -38,6 +37,9 @@ export const NavBarUl = styled.ul`
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+  // @media (max-width: 600px) {
+  //   gap: 1rem;
+  // }
 `
 
 export const NavBarLi = styled.li`
@@ -59,6 +61,9 @@ export const NavBarIcon = styled(NavBarImg)`
 
 export const SpaceBreak = styled.div`
   height: 1rem;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `
 
 export const PText = styled.p`
@@ -67,11 +72,7 @@ export const PText = styled.p`
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
   cursor: ${(props) => props.cursor};
-  @media (max-width: 1000px) {
-    font-size: inherit;
-  }
 `
-
 export const ContentContainer = styled.div`
   width: ${(props) => props.width};
   display: flex;
@@ -88,7 +89,7 @@ export const ALink = styled(Link)`
   gap: 1rem;
   color: inherit;
   text-decoration: none;
-  @media (max-width: 1000px) {
+  @media (max-width: 600px) {
     color: #fff;
     text-decoration: none;
   }

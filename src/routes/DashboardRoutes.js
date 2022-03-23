@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
 import { MainLayoutGrid } from 'GlobalStyle'
 import Header from 'components/Header/Header'
 import NavBar from 'components/NavBar/NavBar'
@@ -10,10 +11,12 @@ import Historial from 'pages/Historial/Historial'
 import Confirmacion from 'pages/Confirmacion/Confirmacion'
 
 const DashboardRoutes = () => {
+  const [navToggle, setNavToggle] = useState(false)
+
   return (
     <MainLayoutGrid>
-      <Header height="4.4rem" />
-      <NavBar />
+      <Header height="4.4rem" navToggle={navToggle} setNavToggle={setNavToggle} />
+      <NavBar navToggle={navToggle} />
       <Routes>
         <Route element={<Main page={<Home />} />} path="/" />
         <Route element={<Main page={<Historial />} />} path="/historial" />
