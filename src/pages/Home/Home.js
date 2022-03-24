@@ -8,6 +8,9 @@ import Transferencia from 'assets/icons_svg/Icon/Transferencia.svg'
 import TransferenciaWhite from 'assets/icons_svg/Icon/TransferenciaWhite.svg'
 import Tarjetas from 'assets/icons_svg/Icon/Tarjetas.svg'
 import Comprobantes from 'assets/icons_svg/Icon/Comprobantes.svg'
+import Perfil from 'assets/icons_svg/Icon/Perfil.svg'
+import Ayuda from 'assets/icons_svg/Icon/Ayuda.svg'
+import Contact from 'assets/icons_svg/Contact.svg'
 
 import {
   CardContainer,
@@ -107,7 +110,7 @@ const Home = () => {
                 <ALink to="/contactos">
                   <ContentContainer flexAlignItems="center" flexDirection="column" gap="0 3rem">
                     <IconBg backgroundColor="#F7C548">
-                      <Icon src={Transferencia} />
+                      <Icon src={Perfil} />
                     </IconBg>
                     <PText>Agregar contacto</PText>
                   </ContentContainer>
@@ -117,7 +120,7 @@ const Home = () => {
                 <ALink to="/perfil">
                   <ContentContainer flexAlignItems="center" flexDirection="column" gap="0 3rem">
                     <IconBg backgroundColor="#F7C548">
-                      <Icon src={Comprobantes} />
+                      <Icon src={Contact} />
                     </IconBg>
                     <PText>Modificar Perfil</PText>
                   </ContentContainer>
@@ -127,7 +130,7 @@ const Home = () => {
                 <ALink to="/ayuda">
                   <ContentContainer flexAlignItems="center" flexDirection="column" gap="0 3rem">
                     <IconBg backgroundColor="#F7C548">
-                      <Icon src={Tarjetas} />
+                      <Icon src={Ayuda} />
                     </IconBg>
                     <PText>Necesito Ayuda</PText>
                   </ContentContainer>

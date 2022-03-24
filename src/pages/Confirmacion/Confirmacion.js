@@ -1,11 +1,11 @@
 import { Suspense, lazy } from 'react'
 import ConfirmacionLoading from 'components/Confirmacion/ConfirmacionLoading'
+import { MainButton, TextButton } from 'components/Buttons/styles'
 
 import {
   ConfirmacionGridLayout,
   ConfirmacionCard,
   ConfirmacionBtns,
-  CardContainer,
   ContentContainer,
   PText,
   ALink,
@@ -33,11 +33,9 @@ const Confirmacion = () => {
             </PText>
           </ALink>
           <ContentContainer cursor="pointer" flexAlignItems="center" flexJustify="center">
-            <CardContainer backgroundColor="#005758">
-              <PText color="#fff" margin="1rem">
-                VER COMPROBANTE
-              </PText>
-            </CardContainer>
+            <MainButton>
+              <TextButton>VER COMPROBANTE</TextButton>
+            </MainButton>
           </ContentContainer>
         </ContentContainer>
       </ConfirmacionBtns>

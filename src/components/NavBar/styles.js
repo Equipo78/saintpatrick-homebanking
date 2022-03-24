@@ -56,7 +56,9 @@ const NavBarImg = styled.img`
 `
 
 export const NavBarIcon = styled(NavBarImg)`
-  filter: invert(1);
+  @media (max-width: 600px) {
+    filter: invert(1);
+  }
 `
 
 export const SpaceBreak = styled.div`

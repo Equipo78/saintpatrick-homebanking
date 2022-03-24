@@ -13,7 +13,7 @@ export const MainButton = styled.button`
   border-radius: 0.5rem;
   align-items: center;
   color: #ffffff;
-  margin-top: 1rem;
+  // margin-top: 1rem;
   :hover {
     background-color: #008889;
   }

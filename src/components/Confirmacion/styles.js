@@ -65,7 +65,9 @@ const IconImg = styled.img`
   height: ${(props) => props.iconSize};
 `
 
-export const Icon = styled(IconImg)``
+export const Icon = styled(IconImg)`
+  filter: invert(57%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(99%) contrast(93%);
+`
 
 const MainImg = styled.img`
   position: relative;
