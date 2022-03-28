@@ -14,20 +14,20 @@ export const NavBarContainer = styled.nav`
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
   width: 100%;
+  overflow: hidden;
   @media (max-width: 600px) {
     display: ${(props) => props.display};
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    padding: 3rem 2rem 4rem;
-    overflow: hidden;
-    overflow-y: hidden;
+    padding: 6rem 2rem 1rem;
     background-color: #005758;
     color: #fff;
-    width: 100%;
+    width: 70%;
     z-index: 9000;
     height: 100vh;
+    box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.5);
   }
 `
 
@@ -37,9 +37,9 @@ export const NavBarUl = styled.ul`
   gap: 1.5rem;
   margin: 0;
   padding: 0;
-  // @media (max-width: 600px) {
-  //   gap: 1rem;
-  // }
+  @media (max-width: 600px) {
+    gap: 1rem;
+  }
 `
 
 export const NavBarLi = styled.li`
@@ -53,6 +53,10 @@ export const NavBarLi = styled.li`
 const NavBarImg = styled.img`
   width: 23px;
   height: 23px;
+  @media (max-width: 600px) {
+    width: 20px;
+    height: 20px;
+  }
 `
 
 export const NavBarIcon = styled(NavBarImg)`
@@ -74,6 +78,9 @@ export const PText = styled.p`
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
   cursor: ${(props) => props.cursor};
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `
 export const ContentContainer = styled.div`
   width: ${(props) => props.width};

@@ -11,6 +11,11 @@ export const HeaderStyled = styled.div`
   height: ${(props) => props.height};
   background-color: var(--primary);
   z-index: 9999;
+  @media (max-width: 600px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 `
 
 export const Logo = styled.img`

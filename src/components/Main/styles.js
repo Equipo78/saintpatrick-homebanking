@@ -5,4 +5,5 @@ export const MainContainer = styled.main`
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  padding-top: 3rem;
 `
