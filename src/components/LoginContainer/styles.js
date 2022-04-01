@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import userpng from 'assets/background-login/user.png'
 import lockpng from 'assets/background-login/lock.png'
 import { fadeIn } from 'GlobalStyle'
-import { Link } from 'react-router-dom'
 
 export const Wrapper = styled.div`
   grid-column: 3;
@@ -119,11 +118,4 @@ export const TextButton = styled.p`
 
 export const Arrow = styled(ArrowForwardOutlined)`
   color: var(--secondary);
-`
-
-export const ALink = styled(Link)`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  text-decoration: none;
 `
