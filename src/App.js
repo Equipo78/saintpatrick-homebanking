@@ -1,10 +1,12 @@
+import { AccountsProvider } from 'context/AccountsContext'
 import AppRouter from 'routes/AppRouter'
+AccountsProvider
 
 function App() {
   return (
-    <div>
+    <AccountsProvider>
       <AppRouter />
-    </div>
+    </AccountsProvider>
   )
 }
 

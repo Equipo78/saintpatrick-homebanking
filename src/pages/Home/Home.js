@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import TopDecor2 from 'assets/background-main/TopDecor2.svg'
 import Copy from 'assets/icons_svg/Copy.svg'
 import Visible from 'assets/icons_svg/Visible.svg'
@@ -11,6 +11,9 @@ import Comprobantes from 'assets/icons_svg/Icon/Comprobantes.svg'
 import Perfil from 'assets/icons_svg/Icon/Perfil.svg'
 import Ayuda from 'assets/icons_svg/Icon/Ayuda.svg'
 import Contact from 'assets/icons_svg/Contact.svg'
+import AccountsContext from 'context/AccountsContext'
+import { useAccounts } from 'hooks/useAccounts'
+import axios from 'axios'
 
 import {
   CardContainer,
@@ -32,6 +35,21 @@ import {
 } from './styles'
 
 const Home = () => {
+  const [apiData, setApiData] = useState({})
+  // const { accounts } = useAccounts(AccountsContext)
+  // const { accounts,setAccounts,cantAccounts,sortByLowest,sortByHighest,showfirstPage,showSecondPage}
+
+  useEffect(() => {
+    const apiURL = `https://app-bancaria.herokuapp.com/account`
+
+    axios
+      .get(apiURL)
+      .then((res) => setApiData(res.data))
+      .catch(function (error) {
+        console.log(error)
+      })
+  }, [])
+
   const [visible, setVisible] = useState(false)
   const setVisibility = (e) => {
     e.preventDefault()
@@ -146,6 +164,9 @@ const Home = () => {
             <TitleH3>Ultimos movimientos</TitleH3>
             <ContentContainer margin="1.5rem 0">
               <Ul flexAlignItems="stretch" flexDirection="column" gap="1.5rem" padding="0">
+                {/* {apiData.map((account) => (
+                  <Li key={account.bank}>{account.nro_card}</Li>
+                ))} */}
                 <Li>
                   <ContentContainer flexAlignItems="center" gap="1rem" width="70%">
                     <IconBg backgroundColor="#005758">
